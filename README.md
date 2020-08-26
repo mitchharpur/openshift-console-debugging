@@ -3,7 +3,7 @@ File overlays to help VS Code debugging of the openshift console repo.
 
 
 # Instructions
-- Read [debugging go](./docs/debugging/debugging-go)
+- Read [debugging go](./docs/debugging/debugging-go.md)
 - Make sure go and delve are installed
 - Make sure the scripts are executable.
 ```sh

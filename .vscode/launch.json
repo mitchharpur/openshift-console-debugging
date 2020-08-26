@@ -1,0 +1,136 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug: Launch the Console Frontend",
+            "program": "./frontend/node_modules/.bin/webpack-dev-server",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "args": [
+                "--config",
+                "../frontend/webpack.config.js"
+            ],
+            "autoAttachChildProcesses": true,
+            "stopOnEntry": true
+        },
+        {
+            "preLaunchTask": "SetConsoleDebuggerEnvironment",
+            "name": "Debug: Launch the Console Backend",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug", // launches dlv debug command that compiles and launches debug session
+            "program": "${workspaceFolder}/cmd/bridge/main.go", //path to main.main file
+            "host": "${input:consoleHostName}", // --listen
+            //"port": "${input:consoleDebuggerApiPort}", // --listen
+            "apiVersion": 2, // --api-version
+            "buildFlags": "-gcflags='all=-N -l'", // --build-flags
+            "cwd": "${workspaceFolder}", //--wd
+            "showLog": true, // --log
+            "output": "${workspaceFolder}/bin/bridge ", // --output
+            "args": [
+                "--base-address=http://${input:consoleHostName}:${input:consoleApiPort}",
+                "--ca-file=${workspaceFolder}/examples/ca.crt",
+                "--k8s-auth=openshift",
+                "--k8s-mode=off-cluster",
+                "--k8s-mode-off-cluster-endpoint=${input:consoleClusterUrl}",
+                "--k8s-mode-off-cluster-skip-verify-tls=true",
+                "--listen=http://${input:consoleHostName}:${input:consoleApiPort}",
+                "--public-dir=${workspaceFolder}/frontend/public/dist",
+                "--user-auth=openshift",
+                "--user-auth-oidc-client-id=console-oauth-client",
+                "--user-auth-oidc-client-secret-file=${workspaceFolder}/examples/console-client-secret",
+                "--user-auth-oidc-ca-file=${workspaceFolder}/examples/ca.crt",
+                "--k8s-mode-off-cluster-alertmanager=${input:consoleAlertManagerUrl}",
+                "--k8s-mode-off-cluster-thanos=${input:consoleThanosUrl}",
+            ]
+        },
+        {
+            "name": "Debug: Attach to a Running Console Backend",
+            "type": "go",
+            "request": "attach",
+            "host": "${input:consoleHostName}",
+            "port": "${input:consoleDebuggerApiPort}",
+            "mode": "remote",
+            "processId": "${input:debuggeeProcessId}",
+            "apiVersion": 2,
+            "remotePath": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "consoleClusterUrl",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+              "fileName": "${workspaceFolder}/debug-environment.env",
+              "key": "CONSOLE_CLUSTER_URL",
+              "default":"no-cluster-url"
+            }
+        },        
+        {
+            "id": "consoleAlertManagerUrl",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+              "fileName": "${workspaceFolder}/debug-environment.env",
+              "key": "CONSOLE_ALERTMANAGER_URL",
+              "default":"no-alert-manager-url"
+            }
+        },        
+        {
+            "id": "consoleThanosUrl",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+              "fileName": "${workspaceFolder}/debug-environment.env",
+              "key": "CONSOLE_THANOS_URL",
+              "default":"no-thanos-url"
+            }
+        },        
+        {
+            "id": "consoleHostName",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+              "fileName": "${workspaceFolder}/debug-environment.env",
+              "key": "CONSOLE_HOST_NAME",
+              "default":"no-host"
+            }
+        },        
+        {
+            "id": "consoleApiPort",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+              "fileName": "${workspaceFolder}/debug-environment.env",
+              "key": "CONSOLE_API_PORT",
+              "default":"no-port"
+            }
+        },        
+        {
+            "id": "consoleDebuggerApiPort",
+            "type": "command",
+            "command": "extension.commandvariable.file.content",
+            "args": {
+              "fileName": "${workspaceFolder}/debug-environment.env",
+              "key": "CONSOLE_DEBUGGER_API_PORT",
+              "default":"no-debugger-port"
+            }
+        },        
+        {
+            "type": "command",
+            "id": "debuggeeProcessId",
+            "command": "shellCommand.execute",
+            "args": {
+                "command": "pgrep bridge",
+            }
+        }
+    ]
+}

@@ -8,10 +8,7 @@ set -u #-u treat unset variable and parameter as error
 set -o pipefail
 
 
-# Use deps from vendor dir.
-export GOFLAGS="-mod=vendor"
-GIT_TAG=${SOURCE_GIT_TAG:-$(git describe --always --tags HEAD)}
-LD_FLAGS=" -X github.com/openshift/console/pkg/version.Version=${GIT_TAG}"
+
 
 #set up the debug environment and variables
 source ./debug-environment.sh
@@ -26,19 +23,8 @@ consoleThanosUrl=$CONSOLE_THANOS_URL
 # update resources retrieved from the cluster
 source ./debug-get-oauth-secret.sh
 source ./debug-get-ca-certificate.sh
-set -x
-dlv debug \
-./cmd/bridge/main.go \
---output=./bin/bridge \
---api-version=2 \
---listen=${consoleHost}:${debuggerApiPort} \
---headless \
---accept-multiclient \
---log \
---wd=. \
---build-flags=" -gcflags='all=-N -l' -ldflags='${LD_FLAGS}' " \
---continue \
--- \
+
+./bin/bridge \
 --base-address=http://${consoleHost}:${consoleApiPort} \
 --ca-file=examples/ca.crt \
 --k8s-auth=openshift \
@@ -52,6 +38,4 @@ dlv debug \
 --user-auth-oidc-client-secret-file=examples/console-client-secret \
 --user-auth-oidc-ca-file=examples/ca.crt \
 --k8s-mode-off-cluster-alertmanager=$consoleAlertManagerUrl \
---k8s-mode-off-cluster-thanos=$consoleThanosUrl 
-
-
+--k8s-mode-off-cluster-thanos=$consoleThanosUrl

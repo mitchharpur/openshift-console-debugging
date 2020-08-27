@@ -23,6 +23,8 @@ consoleClusterUrl=$CONSOLE_CLUSTER_URL
 consoleAlertManagerUrl=$CONSOLE_ALERTMANAGER_URL
 consoleThanosUrl=$CONSOLE_THANOS_URL
 
+#--build-flags="-gcflags='all=-N -l' -ldflags='${LD_FLAGS}' "  \
+
 # update resources retrieved from the cluster
 source ./debug-get-oauth-secret.sh
 source ./debug-get-ca-certificate.sh
@@ -36,7 +38,6 @@ dlv debug \
 --accept-multiclient \
 --log \
 --wd=. \
---build-flags=" -gcflags='all=-N -l' -ldflags='${LD_FLAGS}' " \
 --continue \
 -- \
 --base-address=http://${consoleHost}:${consoleApiPort} \

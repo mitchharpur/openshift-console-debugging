@@ -12,7 +12,7 @@
   ```sh
    go version # should print go version
    echo $GOPATH # should point to ~/go by befault ... unless specifically set otherwise
-   go env # should contain valid values 
+   go env # should contain valid path values ... yours may differ 
    ```
 
 - ## Install [Delve Debugger](https://github.com/go-delve/delve)

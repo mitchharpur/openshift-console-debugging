@@ -10,7 +10,6 @@ Debug script overlays to help with VS Code debugging of the openshift console.
   >From the project **workspace folder**, paste the following into a macOS Terminal or Linux shell prompt.
   ```sh
   /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh ; chmod u+x debug-download.sh ; ./debug-download.sh;)";
-   
   ```
   
 - Make sure you are logged into an openshift cluster. Get the login token from the user interface. It should resemble something similar to the following:

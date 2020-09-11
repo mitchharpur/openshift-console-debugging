@@ -12,7 +12,7 @@ File overlays to help VS Code debugging of the openshift console repo.
 - Download the debug-download script from the github repo and execute it in the openshift console project root
 
   ```sh
-  curl -LJO https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh
+  /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh)";
   chmod u+x debug-download.sh ; 
   ./debug-download.sh
   ls -al debug-*.sh 

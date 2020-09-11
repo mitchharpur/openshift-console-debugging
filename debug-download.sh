@@ -9,7 +9,6 @@ function downloadVSCodeFile(){
   fi
   local url="$repo$file"
   #download the new file
-  echo "Downloading : $url ..."
   curl -fSL $url -o $file
 }
 
@@ -17,13 +16,10 @@ for shellScript in debug-{attach,build,connect,environment,get-ca-certificate,ge
 do
     if [ -f ./$shellScript ]
     then
-        echo "Removing : $shellScript ..."
-        rm ./$shellScript
+      rm ./$shellScript
     fi
     url="$repo$shellScript"
-    echo "Downloading : $url ..."
     curl -LJO $url
-    echo "Setting execute permissions : $shellScript ..."
     chmod u+x $shellScript
 done
 # create the folder if it does not exist

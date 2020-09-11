@@ -1,11 +1,11 @@
 repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
 
 function downloadVSCodeFile(){
-  local file=".vscode/$1"
+  local file=.vscode/$1
   if [ -f $file  ]
   then
     #make a copy of the old file
-    mv $file ".vscode/$(basename $(mktemp -u -t $1))"
+    mv $file .vscode/$(basename $(mktemp -u -t $1))
   fi
   local url="$repo$file"
   #download the new file

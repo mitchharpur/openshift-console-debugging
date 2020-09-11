@@ -21,7 +21,7 @@
     
   - Fedora
     - [Install](https://github.com/go-delve/delve/blob/master/Documentation/installation/linux/install.md)
-    > Note 1 : Best results when delve is built
+    > **Note :** Best results when delve is built
 
 
 >**Note :** Make sure the delve executable is in the path. It is typically $GOPATH/bin

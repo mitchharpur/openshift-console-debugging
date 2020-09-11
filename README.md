@@ -1,5 +1,5 @@
 # Openshift Console Debugging
-File overlays to help VS Code debugging of the openshift console repo.
+Debug script overlays to help with VS Code debugging of the openshift console.
 
 
 # Instructions

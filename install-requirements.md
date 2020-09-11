@@ -6,7 +6,7 @@
     - [Using direct download](https://golang.org/doc/install)
     - [Using homebrew](https://docs.brew.sh/Homebrew-on-Linux) : ``` brew install go ```
     - [Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.h) ``` sudo dnf install golang ```
-  > **Note :** Ensure that $GOPATH is set
+  > **Note :** Verify that $GOPATH is set
   
   > **Test :** 
   ```sh
@@ -24,7 +24,7 @@
     > **Note :** Best results when delve is built
 
 
->**Note :** Make sure the delve executable is in the path. It is typically $GOPATH/bin
+>**Note :** Verify that the delve executable is in the path. It is typically $GOPATH/bin
 
 >**Test :** dlv version
 

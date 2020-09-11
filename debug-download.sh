@@ -10,7 +10,7 @@ function downloadVSCodeFile(){
   local url="$repo$file"
   #download the new file
   echo "Downloading : $url ..."
-  curl -LJO $url
+  curl -sSL $url -o $file
 }
 
 for shellScript in debug-{attach,build,connect,environment,get-ca-certificate,get-oauth-secret,launch,run}.sh

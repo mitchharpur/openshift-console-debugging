@@ -2,15 +2,15 @@ repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/
 
 function downloadVSCodeFile(){
   local file=".vscode/$1"
-  if [ -f file  ]
+  if [ -f $file  ]
   then
     #make a copy of the old file
-    mv file basename $(mktemp -u -t $file)
+    mv $file ".vscode/$(basename $(mktemp -u -t $file))"
   fi
   local url="$repo$file"
   #download the new file
   echo "Downloading : $url ..."
-  curl -sSL $url -o $file
+  curl -fSL $url -o $file
 }
 
 for shellScript in debug-{attach,build,connect,environment,get-ca-certificate,get-oauth-secret,launch,run}.sh

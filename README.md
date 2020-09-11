@@ -7,7 +7,7 @@ Debug script overlays to help with VS Code debugging of the openshift console.
 
 - ## Install the [required software](install-requirements.md)
 - ## Add the debugging scripts to the project root folder
-  >Paste that in a macOS Terminal or Linux shell prompt in project **root folder**.
+  >From the project **workspace folder**, paste the following into a macOS Terminal or Linux shell prompt.
   ```sh
   /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh)";
   chmod u+x debug-download.sh ; 

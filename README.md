@@ -14,8 +14,8 @@ File overlays to help VS Code debugging of the openshift console repo.
   ```sh
   /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh)";
   chmod u+x debug-download.sh ; 
-  ./debug-download.sh
-  ls -al debug-*.sh 
+  ./debug-download.sh;
+  ls -al debug-*.sh; 
   
   
   ```

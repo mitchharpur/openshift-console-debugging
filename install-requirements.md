@@ -29,10 +29,15 @@
 >**Test :** dlv version
 
 - ## Install VSCode go extensions 
-  Make sure that VSCode go extensions are installed
+  Install the following VSCode extensions:
   ```sh
-code --install-extension google.go
-code --install-extension rioj7.command-variable
-code --install-extension augustocdias.tasks-shell-input
-code --install-extension mikestead.dotenv
+   # go extension
+   code --install-extension google.go 
+   # extension to read enviroment files
+   code --install-extension rioj7.command-variable
+   # extension to invoke shell tasks
+   code --install-extension augustocdias.tasks-shell-input
+   # extension to color code env files
+   code --install-extension mikestead.dotenv
+
   ```

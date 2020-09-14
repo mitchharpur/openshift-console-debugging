@@ -29,7 +29,7 @@
 >**Test :** dlv version
 
 
-- ## Install needed VSCode go extensions 
+- ## Install needed [VSCode](https://code.visualstudio.com/docs/editor/command-line) extensions from the commandline 
   Check what extensions are installed
   ```sh
   #list go extensions to see what extensions are installed

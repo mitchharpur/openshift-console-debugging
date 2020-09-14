@@ -28,7 +28,13 @@
 
 >**Test :** dlv version
 
-- ## Install VSCode go extensions 
+
+- ## Install needed VSCode go extensions 
+  Check what extensions are installed
+  ```sh
+  #list go extensions to see what extensions are installed
+  code --list-extensions
+  ```
   Install the following VSCode extensions:
   ```sh
    # go extension

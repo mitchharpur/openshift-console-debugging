@@ -12,7 +12,7 @@ function downloadVSCodeFile(){
   curl -fSL $url -o $file
 }
 
-for shellScript in debug-{attach,build,connect,environment,get-ca-certificate,get-oauth-secret,launch,run}.sh
+for shellScript in debug-{attach,build,connect,environment,get-ca-certificate,get-oauth-secret,launch,run,install-plugins}.sh
 do
     if [ -f ./$shellScript ]
     then

@@ -5,7 +5,7 @@ function downloadVSCodeFile(){
   if [ -f $file  ]
   then
     #make a copy of the old file
-    mv $file .vscode/$(basename $(mktemp -u -t $1))
+    mv $file .vscode/$(basename $(mktemp -u $file.XXXX))
   fi
   local url="$repo$file"
   #download the new file

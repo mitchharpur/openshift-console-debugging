@@ -7,11 +7,11 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
   > This document will help you to understand how go debugging works in both VSCode and the terminal
 
 - ## 2) Install the [required software](install-requirements.md)
-  > <span style="color:red;">***Note :***</span> Verify that $GOPATH is a valid value and ``` go version ; go env ``` return valid values
+  > <span style="color:red;">***Note :***</span> Verify that $GOPATH is a valid value and ``` go version ; go env ``` both return valid values
 
   > <span style="color:red;">***Note :***</span> Verify that $GOPATH/bin is in the system path  
 
-  > <span style="color:red;">***Note :***</span> Verify that delve is installed  by checking if``` dlv version ``` returns a valid value
+  > <span style="color:red;">***Note :***</span> Verify that delve is installed  by checking if``` dlv version; ``` returns a valid value
 
 - ## 3) Run the Debugging Setup Script 
   >From the console VSCode <span style="color:red">**workspace folder**</span>, paste the following into a macOS Terminal or Linux shell prompt and press return.

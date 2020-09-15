@@ -1,4 +1,4 @@
-- ## Install [Go](https://golang.org/doc/)
+- ## 1.Install [Go](https://golang.org/doc/)
   - Mac
     - [Using direct download](https://golang.org/doc/install)
     - [Using homebrew](https://docs.brew.sh) : ``` brew install go ```
@@ -16,7 +16,8 @@
    go env # should contain valid path values ... yours may differ 
    ```
 
-- ## Install [Delve Debugger](https://github.com/go-delve/delve)
+- ## 2.Install [Delve Debugger](https://github.com/go-delve/delve)
+  > **Note :** Ensure $GOPATH is correct before doing this !!!
   - Mac
     - [Install](https://github.com/go-delve/delve/blob/master/Documentation/installation/osx/install.md)
     ```sh

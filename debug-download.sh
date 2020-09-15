@@ -29,3 +29,7 @@ do
  downloadVSCodeFile $file
 done
 unset file
+
+echo "Installing vscode plugins"
+# install plugins
+./install-plugins.sh

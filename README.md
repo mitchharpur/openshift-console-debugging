@@ -16,11 +16,12 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
 - ## 3) Run the Debugging Setup Script 
   >From the console VSCode <span style="color:red">**workspace folder**</span>, paste the following into a macOS Terminal or Linux shell prompt and press return. Its probably a good idea to do this on a seperate branch to ensure the scripts dont get checked into the master or primary branch.
   ```sh
-  /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh ; chmod u+x debug-download.sh ; ./debug-download.sh;)"; ./debug-install-plugins.sh;
-  
+  /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh ; chmod u+x debug-download.sh ; ./debug-download.sh;)"; ./debug-install-plugins.sh; ./debug-environment.sh
+
+
   ```
   
-  
+
   - <span style="color:red;">***Note :***</span> You must be logged in to an openshift cluster. Get the login command with token from the user interface. It should resemble something similar to the following:
   ```sh
   oc login 

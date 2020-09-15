@@ -8,7 +8,6 @@
     - [Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.h) ``` sudo dnf install golang  ``` . 
     > **Note:** dnf is the method to get the best results on fedora
   > **Note :** Verify that $GOPATH is set
-  
   > **Test :** 
   ```sh
    go version # should print go version
@@ -36,7 +35,10 @@
 
 >**Note :** Verify that the delve executable is in the path. It is typically $GOPATH/bin
 
->**Test :** dlv version
+>**Test :** 
+```sh
+dlv version
+```
 
 - ## Install the [jq](https://stedolan.github.io/jq/download/) utility 
 This utility extracts json fragments from json returned from the cluster.

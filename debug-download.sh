@@ -8,7 +8,7 @@ cyan="$bold$darkcyan"                     # bright cyan text
 gray=$(tput setaf 7)                      # dim white text
 darkgray="$bold"$(tput setaf 0)           # bold black = dark gray text
 white="$bold$gray"                        # bright white text
-yellow=$(tput setaf 3);                   # dark yellow text
+yellow=$(tput setaf 3)                   # dark yellow text
 
 repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
 
@@ -42,7 +42,7 @@ do
       rm ./$shellScript
     fi
     url="$repo$shellScript"
-    echo -e "\n$cyan Downloading $shellScript $reset"
+    echo  "$cyan Downloading $shellScript $reset"
     curl -LJO $url
     echo "$yellow$bold Setting $shellScript mode to be executable $reset"
     chmod u+x $shellScript

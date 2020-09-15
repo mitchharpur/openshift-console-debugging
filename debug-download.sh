@@ -14,6 +14,7 @@ repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/
 
 
 
+
 function downloadVSCodeFile(){
   local fileName="$1"
   local fileBaseName="${fileName%.*}";

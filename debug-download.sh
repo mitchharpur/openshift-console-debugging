@@ -32,4 +32,4 @@ unset file
 
 echo "Installing vscode plugins"
 # install debug plugins
-./debug-install-plugins.sh
+. ./debug-install-plugins.sh

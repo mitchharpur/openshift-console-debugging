@@ -14,7 +14,7 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
   > <span style="color:red;">***Note :***</span> Verify that delve is installed  by checking if``` dlv version ``` returns a valid value
 
 - ## 3) Run the Debugging Setup Script 
-  >From the project <span style="color:red">**workspace folder**</span>, paste the following into a macOS Terminal or Linux shell prompt.
+  >From the console VSCode <span style="color:red">**workspace folder**</span>, paste the following into a macOS Terminal or Linux shell prompt and press return.
   ```sh
   /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh ; chmod u+x debug-download.sh ; ./debug-download.sh;)";
   

@@ -29,6 +29,15 @@
 
 >**Test :** dlv version
 
+- ## Install the [jq](https://stedolan.github.io/jq/download/) utility 
+This utility extracts json fragments from json returned from the cluster.
+```sh
+brew install jq
+```
+or
+```sh
+sudo dnf install jq
+```
 
 - ## Install needed [VSCode](https://code.visualstudio.com/docs/editor/command-line) extensions from the command line or terminal
   > Remember to [activate](https://github.com/golang/vscode-go/blob/master/docs/commands.md#go-installupdate-tools) the go extension as outlined in the [extension online documentation](https://marketplace.visualstudio.com/items?itemName=golang.Go).

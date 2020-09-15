@@ -6,9 +6,11 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
 - ## 1) Read [Debugging The Console](./docs/debugging/debugging-go.md)
 
 - ## 2) Install the [required software](install-requirements.md)
-  > <span style="color:red">***Note :***</span> Verify that $GOPATH is a valid value and ``` go version ; go env ``` return valid values
-  > <span style="color:red">***Note :***</span> Verify that $GOPATH/bin is in the system path  
-  > <span style="color:red">***Note :***</span> Verify that delve is installed  by checking if``` dlv version ``` returns a valid value
+  > <span style="color:red;">***Note :***</span> Verify that $GOPATH is a valid value and ``` go version ; go env ``` return valid values
+
+  > <span style="color:red;">***Note :***</span> Verify that $GOPATH/bin is in the system path  
+
+  > <span style="color:red;">***Note :***</span> Verify that delve is installed  by checking if``` dlv version ``` returns a valid value
 
 - ## 3) Setup Script 
   >From the project <span style="color:red">**workspace folder**</span>, paste the following into a macOS Terminal or Linux shell prompt.

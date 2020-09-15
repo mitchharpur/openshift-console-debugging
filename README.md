@@ -4,6 +4,7 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
 
 # Instructions
 - ## 1) Read [Debugging The Console](./docs/debugging/debugging-go.md)
+  > This document will help you to understand how go debugging works in both VSCode and the terminal
 
 - ## 2) Install the [required software](install-requirements.md)
   > <span style="color:red;">***Note :***</span> Verify that $GOPATH is a valid value and ``` go version ; go env ``` return valid values
@@ -12,7 +13,7 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
 
   > <span style="color:red;">***Note :***</span> Verify that delve is installed  by checking if``` dlv version ``` returns a valid value
 
-- ## 3) Setup Script 
+- ## 3) Run the Debugging Setup Script 
   >From the project <span style="color:red">**workspace folder**</span>, paste the following into a macOS Terminal or Linux shell prompt.
   ```sh
   /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh ; chmod u+x debug-download.sh ; ./debug-download.sh;)";

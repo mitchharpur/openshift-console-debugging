@@ -50,7 +50,7 @@ This utility extracts json fragments from json returned from the cluster.
     ```
 
 - ## Install needed [VSCode](https://code.visualstudio.com/docs/editor/command-line) extensions from the command line or terminal
-  > Remember to [activate](https://github.com/golang/vscode-go/blob/master/docs/commands.md#go-installupdate-tools) the go extension as outlined in the [extension online documentation](https://marketplace.visualstudio.com/items?itemName=golang.Go).
+  > Remember to [activate](https://github.com/golang/vscode-go/blob/master/docs/commands.md#go-installupdate-tools) the go extension as outlined in the [extension online documentation](https://marketplace.visualstudio.com/items?itemName=golang.Go). If the extensions are grayed out in VSCode extension viewer, then restart VSCode.
   Check what extensions are installed
   ```sh
   #list vscode extensions to see what extensions are installed

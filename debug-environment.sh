@@ -16,6 +16,8 @@ yellow=$(tput setaf 3);                   # dark yellow text
 checkClusterStatus(){
   declare loginError="You must be logged in"
   declare connectError="Unable to connect"
+  declare configError="Missing or incomplete configuration info"
+
   # all Bourne-style shells support file descriptor reassignment i.e 2>&1
   # note: oc std error stream is redirected to std out stream in order to gep it
   declare status=$(oc status 2>&1 | head -n 1 )
@@ -27,6 +29,11 @@ checkClusterStatus(){
     echo -e "\n${cyan} - Status             : ${red}${bold}$status${reset}"
     return 2
   fi
+  if [[ $status == *"$configError"* ]]; then
+    echo -e "\n${cyan} - Status             : ${red}${bold}$status${reset}"
+    return 3
+  fi
+  
   echo -e "\n${cyan} - Status             : ${green}${bold}Cluster Available : ${reset}${status}"
   return 0    
 }

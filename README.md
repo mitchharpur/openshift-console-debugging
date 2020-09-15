@@ -20,6 +20,7 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
   
   ```
   
+  
   - <span style="color:red;">***Note :***</span> You must be logged in to an openshift cluster. Get the login command with token from the user interface. It should resemble something similar to the following:
   ```sh
   oc login 

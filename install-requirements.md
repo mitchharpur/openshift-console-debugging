@@ -19,9 +19,17 @@
 - ## Install [Delve Debugger](https://github.com/go-delve/delve)
   - Mac
     - [Install](https://github.com/go-delve/delve/blob/master/Documentation/installation/osx/install.md)
+    ```sh
+      go get github.com/go-delve/delve/cmd/dlv
+    ```
     
   - Fedora
     - [Install](https://github.com/go-delve/delve/blob/master/Documentation/installation/linux/install.md)
+    ```sh
+      git clone https://github.com/go-delve/delve.git $GOPATH/src/github.com/go-delve/delve
+      cd $GOPATH/src/github.com/go-delve/delve
+      make install
+    ```
     > **Note :** Best results when delve is built
 
 

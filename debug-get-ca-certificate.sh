@@ -11,6 +11,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else
     echo "Retrieving CA certificate on linux from cluster..." 
     oc get secrets -n default --field-selector type=kubernetes.io/service-account-token -o json | \
-    jq '.items[0].data."ca.crt"' -r | python -m openssl base64 -d > examples/ca.crt
+    jq '.items[0].data."ca.crt"' -r | python -m base64 -d > examples/ca.crt
     # Note: use "openssl base64" because the "base64" tool is different between mac and linux
 fi

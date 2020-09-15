@@ -14,7 +14,7 @@ Debug script overlays to help with VS Code debugging of the openshift console.
   
   ```
   
-- Make sure you are logged into an openshift cluster. Get the login token from the user interface. It should resemble something similar to the following:
+  - Make sure you are logged into an openshift cluster. Get the login token from the user interface. It should resemble something similar to the following:
   ```sh
   oc login 
   --token=7dDyxSKIumWvfkCWcwM_9A2vtwx8YiNEZsm9yyh-Ad0 --server=https://api.gitops2.devcluster.openshift.com:6443

@@ -20,17 +20,18 @@ checkClusterStatus(){
 
   # all Bourne-style shells support file descriptor reassignment i.e 2>&1
   # note: oc std error stream is redirected to std out stream in order to gep it
-  declare status=$(oc status 2>&1 | head -n 1 )
+  declare fullStatus=$(oc status 2>&1)
+  declare status=`echo "${fullStatus} | head -1 "` # ${fullStatus%%$'\n'*}  #$($fullstatus | head -n 1 )
   if [[ $status == *"$connectError"* ]]; then
-    echo -e "\n${cyan} - Status             : ${red}${bold}$status${reset}"
+    echo -e "\n${cyan} - Status             : \n\n${red}${bold}$status${reset}"
     return 1
   fi
   if [[ $status == *"$loginError"* ]]; then
-    echo -e "\n${cyan} - Status             : ${red}${bold}$status${reset}"
+    echo -e "\n${cyan} - Status             : \n\n${red}${bold}$status${reset}"
     return 2
   fi
   if [[ $status == *"$configError"* ]]; then
-    echo -e "\n${cyan} - Status             : ${red}${bold}$status${reset}"
+    echo -e "\n${cyan} - Status             : \n\n${red}${bold}$fullStatus${reset}"
     return 3
   fi
   
@@ -53,7 +54,9 @@ configureDebugEnvironment(){
   echo -e "\n${cyan}*** $title ***${reset}\n" 
   #check to see if cluster is available
   checkClusterStatus
-  if [ $? -eq 0 ] # please note the space before and after the file content
+  status=$?
+  # echo "checkClusterStatus = $status"
+  if [[ $status -eq 0 ]] # please note the space before and after the file content
     then
       #cluster is available
       clusterUrl=$(oc whoami --show-server)
@@ -64,19 +67,22 @@ configureDebugEnvironment(){
       export CONSOLE_ALERTMANAGER_URL="${alertManagerUrl}"
       export CONSOLE_THANOS_URL="${thanosUrl}"
     else
-      declare clusterUrl=$(oc whoami --show-server)
       export CONSOLE_CLUSTER_URL="error-no-cluster-available"
       export CONSOLE_ALERTMANAGER_URL="error-no-cluster-alert-manager-available"
       export CONSOLE_THANOS_URL="error-no-cluster-thanos-available"
+      # only invoke oc if it is configured
+      if [[ $status -ne 3 ]];then
+        export CONSOLE_CLUSTER_URL=$(oc whoami --show-server)
+      fi
   fi
   #other misc env variables
   export CONSOLE_DEBUGGER_API_PORT=2345
   export CONSOLE_HOST_NAME=0.0.0.0 # $HOSTNAME # using the host name still has some problems with server origin testing in backend ..i.e web can only be 'localhost'
   export CONSOLE_API_PORT=9000
 
-GIT_TAG=${SOURCE_GIT_TAG:-$(git describe --always --tags HEAD)}
-LD_FLAGS="'-X github.com/openshift/console/pkg/version.Version=${GIT_TAG}'"
-GC_FLAGS="'all=-N -l'"
+  GIT_TAG=${SOURCE_GIT_TAG:-$(git describe --always --tags HEAD)}
+  LD_FLAGS="'-X github.com/openshift/console/pkg/version.Version=${GIT_TAG}'"
+  GC_FLAGS="'all=-N -l'"
 
 
   export CONSOLE_BUILD_FLAGS="-gcflags=${GC_FLAGS} -ldflags=${LD_FLAGS}"

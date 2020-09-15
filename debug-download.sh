@@ -1,17 +1,17 @@
 echo "test1"
-local reset=$(tput sgr0);
-local bold=$(tput bold);
+declare reset=$(tput sgr0);
+declare  bold=$(tput bold);
 
-local red="$(tput setaf 1)";                      # bright red text
-local green=$(tput setaf 2); 
-local darkcyan=$(tput setaf 6);                  # dim cyan text
-local cyan="$bold$darkcyan";                     # bright cyan text
-local gray=$(tput setaf 7);                      # dim white text
-local darkgray="$bold"$(tput setaf 0);           # bold black = dark gray text
-local white="$bold$gray";                        # bright white text
-local yellow=$(tput setaf 3);                   # dark yellow text
+declare red="$(tput setaf 1)";                      # bright red text
+declare green=$(tput setaf 2); 
+declare darkcyan=$(tput setaf 6);                  # dim cyan text
+declare cyan="$bold$darkcyan";                     # bright cyan text
+declare gray=$(tput setaf 7);                      # dim white text
+declare darkgray="$bold"$(tput setaf 0);           # bold black = dark gray text
+declare white="$bold$gray";                        # bright white text
+declare yellow=$(tput setaf 3);                   # dark yellow text
 
-local repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
+declare repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
 
 
 

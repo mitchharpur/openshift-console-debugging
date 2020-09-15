@@ -31,5 +31,5 @@ done
 unset file
 
 echo "Installing vscode plugins"
-# install plugins
-./install-plugins.sh
+# install debug plugins
+./debug-install-plugins.sh

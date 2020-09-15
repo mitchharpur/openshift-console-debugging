@@ -5,7 +5,8 @@
   - Fedora
     - [Using direct download](https://golang.org/doc/install)
     - [Using homebrew](https://docs.brew.sh/Homebrew-on-Linux) : ``` brew install go ```
-    - [Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.h) ``` sudo dnf install golang ```
+    - [Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.h) ``` sudo dnf install golang  ``` . 
+    > **Note:** dnf is the method to get the best results on fedora
   > **Note :** Verify that $GOPATH is set
   
   > **Test :** 
@@ -29,17 +30,18 @@
 >**Test :** dlv version
 
 
-- ## Install needed [VSCode](https://code.visualstudio.com/docs/editor/command-line) extensions from the commandline 
+- ## Install needed [VSCode](https://code.visualstudio.com/docs/editor/command-line) extensions from the command line or terminal
+  > Remember to [activate](https://github.com/golang/vscode-go/blob/master/docs/commands.md#go-installupdate-tools) the go extension as outlined in the [extension online documentation](https://marketplace.visualstudio.com/items?itemName=golang.Go).
   Check what extensions are installed
   ```sh
-  #list go extensions to see what extensions are installed
+  #list vscode extensions to see what extensions are installed
   code --list-extensions
   ```
   Install the following VSCode extensions:
   ```sh
    # go extension
    code --install-extension google.go 
-   # extension to read enviroment files
+   # extension to read enviroment files for command substitution
    code --install-extension rioj7.command-variable
    # extension to invoke shell tasks
    code --install-extension augustocdias.tasks-shell-input

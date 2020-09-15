@@ -1,3 +1,4 @@
+echo "test1"
 local reset=$(tput sgr0);
 local bold=$(tput bold);
 

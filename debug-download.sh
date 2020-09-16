@@ -62,7 +62,7 @@ do
     url="$repo$shellScript"
     echo -e  "$cyan Downloading $shellScript $reset"
     curl -LJO $url
-    echo -e "$yellow$bold Setting $shellScript mode to be executable $reset"
+    echo -e "$yellow$bold Setting $shellScript mode to be executable $reset\n"
     chmod u+x $shellScript
 done
 # Create the folder if it does not already exist

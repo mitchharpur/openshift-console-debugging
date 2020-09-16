@@ -34,7 +34,7 @@ function downloadVSCodeFile(){
     fi
     if [[ $backups -eq 0 ]]
     then
-     echo -e "Note: $fileName already exists .... making a backup of the existing $fileName into $backupName"
+     printf "Note: $fileName already exists .... making a backup of the existing $fileName into $backupName"
      # echo -e $("$red$bold Note: $fileName already exists .... making a backup of the existing $fileName into $backupName $reset")
      mv $filePath $fileFolder$backupName
     fi

@@ -29,7 +29,7 @@ function downloadVSCodeFile(){
     # Make a copy of the old file in order not to overwrite any previous developer settings
 
     local backupName=$(mktemp -u $fileBaseName.old.XXXX.$fileExtension)
-    if [[ $OSTYPE == "darwin" ]];then
+    if [[ $OSTYPE == "darwin"* ]];then
       # Note: mac bsd implements mktemp differently
       backupName="$(basename $(mktemp -q  -t $fileBaseName.old).$fileExtension)"
     fi

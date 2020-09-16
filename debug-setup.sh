@@ -11,7 +11,7 @@ darkgray=$bold$(tput setaf 0)           # bold black = dark gray text
 white=$bold$gray                        # bright white text
 yellow=$(tput setaf 3)                  # dark yellow text
 
-echo -e "$green$bold *** Installing required VSCode extensions ... *** $reset"
+echo -e "\n$green$bold *** Installing required VSCode extensions ... *** $reset\n"
 . ./debug-install-plugins.sh
-echo -e "$green$bold *** Checking and setting up console debugging environment  ... *** $reset"
+echo -e "\n$green$bold *** Checking and setting up console debugging environment  ... *** $reset\n"
 . ./debug-environment.sh

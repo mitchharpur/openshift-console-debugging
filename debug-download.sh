@@ -15,8 +15,6 @@
 #}
 
 
-
-
 function downloadVSCodeFile(){
   local fileName="$1"
   local fileBaseName="${fileName%.*}";
@@ -33,7 +31,7 @@ function downloadVSCodeFile(){
   fi
   local url="$repo$fileFolder$fileName"
   #download the file file
-  echo "$cyan Downloading $filePath $reset"
+  #echo "$cyan Downloading $filePath $reset"
   curl -fSL $url -o $filePath
 }
 #setColors
@@ -45,9 +43,9 @@ do
       rm ./$shellScript
     fi
     url="$repo$shellScript"
-    echo  "$cyan Downloading $shellScript $reset"
+    #echo  "$cyan Downloading $shellScript $reset"
     curl -LJO $url
-    echo "$yellow$bold Setting $shellScript mode to be executable $reset"
+    #echo "$yellow$bold Setting $shellScript mode to be executable $reset"
     chmod u+x $shellScript
 done
 # create the folder if it does not exist

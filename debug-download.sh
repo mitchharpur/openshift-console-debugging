@@ -11,6 +11,9 @@ darkgray=$bold$(tput setaf 0)           # bold black = dark gray text
 white=$bold$gray                        # bright white text
 yellow=$(tput setaf 3)                  # dark yellow text
 
+echo -e "$yellow$bold Downloading debug-*.sh files ... $reset"
+
+
 repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
 
 
@@ -49,7 +52,7 @@ function downloadVSCodeFile(){
   curl -fSL $url -o $filePath
 }
 
-for shellScript in debug-{attach,build,connect,clean,environment,get-ca-certificate,get-oauth-secret,launch,run,install-plugins}.sh
+for shellScript in debug-{setup,attach,build,connect,clean,environment,get-ca-certificate,get-oauth-secret,launch,run,install-plugins}.sh
 do
     # remove the file if it exists
     if [[ -f ./$shellScript ]]

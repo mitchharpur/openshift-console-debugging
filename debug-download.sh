@@ -1,4 +1,4 @@
-function setColors(){
+#function setColors(){
   reset="";#$(tput sgr0);
   bold="";#$(tput bold);
 
@@ -12,7 +12,7 @@ function setColors(){
   yellow="";#$(tput setaf 3);                   # dark yellow text
 
   repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
-}
+#}
 
 
 
@@ -36,7 +36,7 @@ function downloadVSCodeFile(){
   echo "$cyan Downloading $filePath $reset"
   curl -fSL $url -o $filePath
 }
-setColors
+#setColors
 
 for shellScript in debug-{attach,build,connect,environment,get-ca-certificate,get-oauth-secret,launch,run,install-plugins}.sh
 do

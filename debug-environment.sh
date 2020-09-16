@@ -3,10 +3,10 @@
 reset=`tput sgr0`
 bold=`tput bold`
 
-red="$(tput setaf 1)"                      # bright red text
+red=$(tput setaf 1)                      # bright red text
 green=$(tput setaf 2)
 darkcyan=$(tput setaf 6)                  # dim cyan text
-cyan="$bold$darkcyan"                     # bright cyan text
+cyan=$bold$darkcyan                     # bright cyan text
 gray=$(tput setaf 7)                      # dim white text
 darkgray="$bold"$(tput setaf 0)           # bold black = dark gray text
 white="$bold$gray"                        # bright white text
@@ -38,6 +38,7 @@ checkClusterStatus(){
   echo -e "\n${cyan} - Status             : ${green}${bold}Cluster Available : ${reset}${status}"
   return 0
 }
+checkClusterStatus
 #configure environment variables and write them to a .env file
 configureDebugEnvironment(){
   # all Bourne-style shells support file descriptor reassignment i.e 2>&1
@@ -112,4 +113,4 @@ configureDebugEnvironment(){
 
 }
 
-configureDebugEnvironment
+#configureDebugEnvironment

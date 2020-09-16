@@ -4,13 +4,13 @@ reset=`tput sgr0`
 bold=`tput bold`
 
 red="$(tput setaf 1)"                      # bright red text
-green=$(tput setaf 2) 
+green=$(tput setaf 2)
 darkcyan=$(tput setaf 6)                  # dim cyan text
 cyan="$bold$darkcyan"                     # bright cyan text
 gray=$(tput setaf 7)                      # dim white text
 darkgray="$bold"$(tput setaf 0)           # bold black = dark gray text
 white="$bold$gray"                        # bright white text
-yellow=$(tput setaf 3);                   # dark yellow text
+yellow=$(tput setaf 3)                   # dark yellow text
 
 # checks the cluster status before requesting cluster information
 checkClusterStatus(){
@@ -21,7 +21,7 @@ checkClusterStatus(){
   # all Bourne-style shells support file descriptor reassignment i.e 2>&1
   # note: oc std error stream is redirected to std out stream in order to gep it
   declare fullStatus=$(oc status 2>&1)
-  declare status=`echo "${fullStatus} | head -1 "` # ${fullStatus%%$'\n'*}  #$($fullstatus | head -n 1 )
+  declare status=${fullStatus%%$'\n'*}  #$($fullstatus | head -n 1 )
   if [[ $status == *"$connectError"* ]]; then
     echo -e "\n${cyan} - Status             : \n\n${red}${bold}$status${reset}"
     return 1
@@ -34,11 +34,11 @@ checkClusterStatus(){
     echo -e "\n${cyan} - Status             : \n\n${red}${bold}$fullStatus${reset}"
     return 3
   fi
-  
+
   echo -e "\n${cyan} - Status             : ${green}${bold}Cluster Available : ${reset}${status}"
-  return 0    
+  return 0
 }
-#configure environment variables and write them to a .env file 
+#configure environment variables and write them to a .env file
 configureDebugEnvironment(){
   # all Bourne-style shells support file descriptor reassignment i.e 2>&1
   # note: oc std error stream is redirected to std out stream in order to gep it
@@ -50,8 +50,8 @@ configureDebugEnvironment(){
   #default values
   local alertManagerUrl="https://alertmanager-main-openshift-monitoring.apps.gitops1.devcluster.openshift.com"
   local thanosUrl="https://thanos-querier-openshift-monitoring.apps.gitops1.devcluster.openshift.com"
-  
-  echo -e "\n${cyan}*** $title ***${reset}\n" 
+
+  echo -e "\n${cyan}*** $title ***${reset}\n"
   #check to see if cluster is available
   checkClusterStatus
   status=$?
@@ -91,7 +91,7 @@ configureDebugEnvironment(){
   environmentFileContents=$environmentFileContents'\nCONSOLE_CLUSTER_URL='$CONSOLE_CLUSTER_URL
   environmentFileContents=$environmentFileContents'\nCONSOLE_ALERTMANAGER_URL='$CONSOLE_ALERTMANAGER_URL
   environmentFileContents=$environmentFileContents'\nCONSOLE_THANOS_URL='$CONSOLE_THANOS_URL
-  
+
   environmentFileContents=$environmentFileContents'\nCONSOLE_HOST_NAME='$CONSOLE_HOST_NAME
   environmentFileContents=$environmentFileContents'\nCONSOLE_API_PORT='$CONSOLE_API_PORT
   environmentFileContents=$environmentFileContents'\nCONSOLE_DEBUGGER_API_PORT='$CONSOLE_DEBUGGER_API_PORT
@@ -107,7 +107,7 @@ configureDebugEnvironment(){
   echo -e   "${cyan} - Thanos Url         : ${white}$CONSOLE_THANOS_URL"
   touch ./$environmentFileName
   echo -e $environmentFileContents > ./$environmentFileName
-  
+
   echo -e "${cyan}\n*** End $title ***\n${reset}"
 
 }

@@ -1,17 +1,17 @@
 function setColors(){
-declare reset=$(tput sgr0);
-declare  bold=$(tput bold);
+  reset="";#$(tput sgr0);
+  bold="";#$(tput bold);
 
-declare red="$(tput setaf 1)";                      # bright red text
-declare green=$(tput setaf 2); 
-declare darkcyan=$(tput setaf 6);                  # dim cyan text
-declare cyan="$bold$darkcyan";                     # bright cyan text
-declare gray=$(tput setaf 7);                      # dim white text
-declare darkgray="$bold"$(tput setaf 0);           # bold black = dark gray text
-declare white="$bold$gray";                        # bright white text
-declare yellow=$(tput setaf 3);                   # dark yellow text
+  red="";#"$(tput setaf 1)";                      # bright red text
+  green="";#$(tput setaf 2); 
+  darkcyan="";#$(tput setaf 6);                  # dim cyan text
+  cyan="";#"$bold$darkcyan";                     # bright cyan text
+  gray="";#$(tput setaf 7);                      # dim white text
+  darkgray="";#"$bold"$(tput setaf 0);           # bold black = dark gray text
+  white="";#"$bold$gray";                        # bright white text
+  yellow="";#$(tput setaf 3);                   # dark yellow text
 
-declare repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
+  repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
 }
 
 

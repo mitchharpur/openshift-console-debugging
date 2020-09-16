@@ -16,6 +16,7 @@ repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/
 
 
 function downloadVSCodeFile(){
+  echo " Downloading .vscode file ..."
   local fileName=$1
   local fileBaseName="${fileName%.*}";
   local fileExtension="${fileName##*.}";
@@ -34,9 +35,9 @@ function downloadVSCodeFile(){
     fi
     if [[ $backups -eq 0 ]]
     then
-     printf "Note: $fileName already exists .... making a backup of the existing $fileName into $backupName"
-     # echo -e $("$red$bold Note: $fileName already exists .... making a backup of the existing $fileName into $backupName $reset")
-     mv $filePath $fileFolder$backupName
+      printf "Note: $fileName already exists .... making a backup of the existing $fileName into $backupName"
+      # echo -e $("$red$bold Note: $fileName already exists .... making a backup of the existing $fileName into $backupName $reset")
+      mv $filePath $fileFolder$backupName
     fi
   fi
   local url="$repo$fileFolder$fileName"

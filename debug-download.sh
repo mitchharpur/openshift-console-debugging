@@ -13,7 +13,6 @@ yellow=$(tput setaf 3)                  # dark yellow text
 
 repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
 
-echo -e "$yellow$bold Downloading and configuring VSCode and Delve debug scripts ...$reset"
 
 function downloadVSCodeFile(){
   local fileName=$1

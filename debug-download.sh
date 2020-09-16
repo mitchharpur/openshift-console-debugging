@@ -1,23 +1,19 @@
 # set -x
-#function setColors(){
 reset=$(tput sgr0)
 bold=$(tput bold)
 
-red=$(tput setaf 1)                      # bright red text
+red=$(tput setaf 1)                     # bright red text
 green=$(tput setaf 2)
-darkcyan=$(tput setaf 6)                  # dim cyan text
+darkcyan=$(tput setaf 6)                # dim cyan text
 cyan=$bold$darkcyan                     # bright cyan text
-gray=$(tput setaf 7)                      # dim white text
+gray=$(tput setaf 7)                    # dim white text
 darkgray=$bold$(tput setaf 0)           # bold black = dark gray text
 white=$bold$gray                        # bright white text
 yellow=$(tput setaf 3)                   # dark yellow text
 
 repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"
-#}
-
 
 function downloadVSCodeFile(){
-  echo -e "Downloading $red.vscode file ...$reset"
   local fileName=$1
   local fileBaseName="${fileName%.*}";
   local fileExtension="${fileName##*.}";
@@ -28,7 +24,6 @@ function downloadVSCodeFile(){
   then
     #make a copy of the old file in order not to overwrite any previous developer settings
     local backupName=$(mktemp -u $fileBaseName.old.XXXX.$fileExtension)
-    # echo "Note1 : Note2"
     backups=0
     if ls $fileFolder$fileBaseName.old.*.$fileExtension > /dev/null 2>&1
     then
@@ -36,8 +31,7 @@ function downloadVSCodeFile(){
     fi
     if [[ $backups -eq 0 ]]
     then
-      #echo "Note: $fileName already exists .... making a backup of the existing $fileName into $backupName"
-      printf "$red$bold Note: $fileName already exists .... making a backup of the existing $fileName into $backupName $reset"
+      echo -e "$red$bold Note: $fileName already exists .... making a backup of the existing $fileName into $backupName $reset"
       mv $filePath $fileFolder$backupName
     fi
   fi

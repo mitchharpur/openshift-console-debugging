@@ -11,7 +11,7 @@ darkgray=$bold$(tput setaf 0)           # bold black = dark gray text
 white=$bold$gray                        # bright white text
 yellow=$(tput setaf 3)                  # dark yellow text
 
-echo -e "$yellow$bold Downloading debug-*.sh files ... $reset"
+echo -e "$green$bold *** Downloading debug-*.sh files ... *** $reset"
 
 
 repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/"

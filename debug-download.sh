@@ -26,7 +26,7 @@ function downloadVSCodeFile(){
   then
     #make a copy of the old file in order not to overwrite any previous developer settings
     local backupName=$(mktemp -u $fileBaseName.old.XXXX.$fileExtension)
-    #echo "$red$bold Note: $fileName already exists .... making a backup of the existing $fileName into $backupName $reset"
+    echo -e "$red$bold Note: $fileName already exists .... making a backup of the existing $fileName into $backupName $reset"
     mv $filePath $fileFolder$backupName
   fi
   local url="$repo$fileFolder$fileName"

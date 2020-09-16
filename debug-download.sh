@@ -16,7 +16,7 @@ repo="https://raw.githubusercontent.com/mitchharpur/openshift-console-debugging/
 
 
 function downloadVSCodeFile(){
-  echo ' Downloading .vscode file ...'
+  echo 'Downloading .vscode file ...'
   local fileName=$1
   local fileBaseName="${fileName%.*}";
   local fileExtension="${fileName##*.}";

@@ -4,7 +4,7 @@ reset="";#$(tput sgr0);
 bold="";#$(tput bold);
 
 red="";#"$(tput setaf 1)";                      # bright red text
-green="";#$(tput setaf 2); 
+green="";#$(tput setaf 2);
 darkcyan="";#$(tput setaf 6);                  # dim cyan text
 cyan="";#"$bold$darkcyan";                     # bright cyan text
 gray="";#$(tput setaf 7);                      # dim white text
@@ -23,7 +23,7 @@ function downloadVSCodeFile(){
   local fileExtension="${fileName##*.}";
   local fileFolder=".vscode/";
   local filePath="./$fileFolder$fileName";
-  
+
   if [[ -f $filePath  ]]
   then
     #make a copy of the old file in order not to overwrite any previous developer settings

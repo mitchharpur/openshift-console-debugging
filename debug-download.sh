@@ -1,4 +1,4 @@
-set -e
+set -x
 #function setColors(){
 reset="";#$(tput sgr0);
 bold="";#$(tput bold);

@@ -38,6 +38,24 @@ checkClusterStatus(){
   echo -e "\n${cyan} - Status             : ${green}${bold}Cluster Available : ${reset}${status}"
   return 0
 }
+
+# updates the  required certificate file in ./examples
+function retrieveClusterCertificate(){
+  echo -e "$yellow$bold"
+  source ./debug-get-ca-certificate.sh
+  echo -e "$reset"
+}
+
+# Updates the required secret retrieved from the cluster.
+# Only works if the cluster has been logged into
+function retrievClusterSecret(){
+  # update resources retrieved from the cluster
+  echo -e "$yellow$bold"
+  source ./debug-get-oauth-secret.sh
+  echo -e "$reset"
+}
+
+
 #checkClusterStatus
 #configure environment variables and write them to a .env file
 configureDebugEnvironment(){
@@ -60,6 +78,9 @@ configureDebugEnvironment(){
   if [[ $status -eq 0 ]] # please note the space before and after the file content
     then
       #cluster is available
+      retrieveClusterCertificate
+      retrievClusterSecret
+
       clusterUrl=$(oc whoami --show-server)
       alertManagerUrl=$(oc -n openshift-config-managed get configmap monitoring-shared-config -o jsonpath='{.data.alertmanagerPublicURL}')
       thanosUrl=$(oc -n openshift-config-managed get configmap monitoring-shared-config -o jsonpath='{.data.thanosPublicURL}')
@@ -134,5 +155,4 @@ configureDebugEnvironment(){
   echo -e "${cyan}\n*** End $title ***\n${reset}"
 
 }
-
 configureDebugEnvironment

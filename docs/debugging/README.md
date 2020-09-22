@@ -5,11 +5,11 @@
 In order to inspect the run time state of a program, it is helpful to be able to control the runtime execution of the program and observe its state at any point during its execution. This is where a debugger proves useful. There are three parts neccesary to do enable this capability:
 
   - **Debuggee** : 
-  The part being debugged. this could be an executable binary or a web script running in a browser.
+  The part being debugged. This could be an executable binary or a web script running in a browser.
   - **Debugger** : 
   The part that controls the execution of the debuggee.
   - **Debugger Client** : 
-  The part that interacts with the user and enables debugging commands and display of observed information.
+  The part that interacts with the user and enables debugging commands and the display of observed information.
 
 These parts can be packaged up into one host program, like the Chrome web browser that enables debugging of javascript. Alternatively, this could be split up into several cooperating programs that collectively enable this capability. An example of this cooperating trio is the [Delve](https://github.com/go-delve/delve) debugger that used by VSCode in the the [Go extension for VSCode](https://marketplace.visualstudio.com/items?itemName=golang.Go).
 

@@ -1,17 +1,25 @@
 # Debugging The Console
 
 ## Debuggers
-A debugger works by taking control of the execution of a process. The process being debugged could be an already running process or it could be one that is started by the debugger.
 
-When a process is being debugged, it participates in a debugging session.The process being debugged is called the **debuggee**. In a debugging session the debugger is able to view and manipulate the state of the debuggee in addition to controlling its execution.
+A **debugger** works by taking control of the execution of a process. The process being debugged could be an already running process or it could be one that is started by the debugger. The mechanism used to take control of a process for debugging relies on system level calls.
 
-A debugger usually exposes an api that allows one or more debugger clients to interact with it. The debugger client could be a visual interface or it could be a text based one. The debugger client issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling entity. This is how the VSCode IDE debugs go applications using the delve go debugger. When stepping through code, it is actually issuing step commands through the a deadless delve api. Some debuggers also have a built in text interface that can function as a debugger client. This allows the debugger to also function as a debugger client and communicate with another debugger instance thought its api in a debugging session. These interactions are illustrated in Figure 1.
+### Debugeee
 
+When a process is being debugged, it participates in a debugging session. The process being debugged is called the **debuggee**. In a debugging session the **debugger** is able to view and manipulate the state of the **debuggee** in addition to controlling its execution.
+
+### Debugger Client
+
+A debugger usually exposes an api that allows one or more debugger clients to interact with it. The **debugger client** could be a visual interface or it could be a text based one at the terminal. The **debugger client** issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling agent.
+This is how the VSCode IDE debugs go applications when using the go extensions. It simply functions as a debugger client to the go delve debugger. When stepping through code, it is issuing step commands through using the exposed api of a headless delve debugger process.
+
+Debuggers usually have a built in text interface that effectively functions as a debugger client. This allows the debugger to also function as a debugger client and communicate with another debugger instance through its api in a debugging session. This debugger process could be on the same machine or on another machine. Figure 1 illustrates the relationship between these  entities.
+
+##### Figure 1 : Debugger
 ![Debugger Interactions](images/debugger.svg "Figure 1")
-> Figure 1 : Debugger Interactions
 
-
-[How debuggers work](https://opensource.com/article/18/1/how-debuggers-really-work)
+For more detail on how this works on a linux based machine, the following article outlines this for linux in more detail: 
+[How debuggers really work](https://opensource.com/article/18/1/how-debuggers-really-work)
 
 ## Considerations
 

@@ -15,7 +15,7 @@ These parts can be packaged up into one host program, like the Chrome web browse
 
 ## Debugger
 
-A **debugger** operates by taking control of the execution and inspection of a process. The process being debugged could be an already running process or it could be one that is started by the debugger itself. The mechanism used to take control of a process for debugging relies on system level calls.
+A **debugger** operates by taking control of the execution and inspection of a process or program. The process being debugged could be an already running process or it could be one that is started by the debugger itself. The mechanism used to take control of a process for debugging relies on system level calls.
 A debugger need not be a seperate executable. In the case of the chrome browser, it is activated by a command line switch at launch time. In the case of executable binaries, the debugger is typically a seperate program.
 
 For more detail on how this works on a linux based machine, the following article outlines this for linux in a little more detail:[How debuggers really work](https://opensource.com/article/18/1/how-debuggers-really-work)

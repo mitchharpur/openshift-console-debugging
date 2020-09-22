@@ -1,4 +1,4 @@
 # Debugging the openshift console
 
-## [A little about debuggers](about-debuggers.md)
+## [How debugging works](about-debuggers.md)
 

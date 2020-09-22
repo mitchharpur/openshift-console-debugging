@@ -2,15 +2,16 @@
 
 ## Sum of the parts
 
-In order to inspect the run time state of a program, it is helpful to be able to control the runtime execution of a program and observe its state at any point during its execution. This is where a debugger proves useful. There are three parts neccesary to do enable this capability:
+In order to inspect the run time state of a program, it is helpful to be able to control the runtime execution of the program and observe its state at any point during its execution. This is where a debugger proves useful. There are three parts neccesary to do enable this capability:
+
   - **Debuggee**
   The part being debugged. this could be an executable binary or a web script running in a browser.
   - **Debugger**
   The part that controls the execution of the debuggee.
   - **Debugger Client**
-  The part that interacts with the user and enables the useful display of observed information.
+  The part that interacts with the user and enables the display of observed information.
 
-These could be packaged up into one program, like the Chrome web browser that enables debugging javascript. Alternatively this could be split up into several cooperating programs that collectivly enable this capability. An example of this is the go delve debugger being used by VSCode.
+These parts could be packaged up into one program, like the Chrome web browser that enables debugging javascript. Alternatively this could be split up into several cooperating programs that collectivly enable this capability. An example of this is the go Delve debugger that used by VSCode in the the [go extensions](https://marketplace.visualstudio.com/items?itemName=golang.Go).
 
 ## Debugger
 

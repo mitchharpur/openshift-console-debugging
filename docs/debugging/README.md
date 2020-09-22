@@ -3,11 +3,13 @@
 ## Debuggers
 A debugger works by taking control of the execution of a process. The process being debugged could be an already running process or it could be one that is started by the debugger.
 
-When a process is being debugged, it participates in a debugging session.The process being debugged is called the debuggee. In a debugging session the debugger is able to view and manipulate the state of the debuggee in addition to controlling its execution.
+When a process is being debugged, it participates in a debugging session.The process being debugged is called the **debuggee**. In a debugging session the debugger is able to view and manipulate the state of the debuggee in addition to controlling its execution.
 
-The debugger usually exposes an api that allows one or more debugger clients to interact with it. The debugger client could be a visual interface or a text based one. The debugger client issues commands using the debugger api in order to step through the debugee and view its state. This is how the VSCode IDE debugs go applications using the delve go debugger. Some debuggers also have a built in text interface that functions as a debugger client. This allows the debugger to also function as a debugger client in a debugging session.
+A debugger usually exposes an api that allows one or more debugger clients to interact with it. The debugger client could be a visual interface or it could be a text based one. The debugger client issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling entity. This is how the VSCode IDE debugs go applications using the delve go debugger. When stepping through code, it is actually issuing step commands through the a deadless delve api. Some debuggers also have a built in text interface that can function as a debugger client. This allows the debugger to also function as a debugger client and communicate with another debugger instance thought its api in a debugging session. These interactions are illustrated in Figure 1.
 
-![SVG](images/debugger.svg)
+![Debugger Interactions](images/debugger.svg "Figure 1")
+
+
 
 [How debuggers work](https://opensource.com/article/18/1/how-debuggers-really-work)
 

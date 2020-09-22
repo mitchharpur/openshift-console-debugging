@@ -1,25 +1,27 @@
-# Debugging The Console
+# A little about debuggers and debugging
 
 ## Debuggers
 
 A **debugger** works by taking control of the execution of a process. The process being debugged could be an already running process or it could be one that is started by the debugger. The mechanism used to take control of a process for debugging relies on system level calls.
 
-### Debugeee
+### Debuggee
 
 When a process is being debugged, it participates in a debugging session. The process being debugged is called the **debuggee**. In a debugging session the **debugger** is able to view and manipulate the state of the **debuggee** in addition to controlling its execution.
 
 ### Debugger Client
 
 A debugger usually exposes an api that allows one or more debugger clients to interact with it. The **debugger client** could be a visual interface or it could be a text based one at the terminal. The **debugger client** issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling agent.
-#### VSCode 
-Consider how the VSCode IDE debugs go applications when using the go extensions. It simply functions as a debugger client to the go delve debugger. When stepping through code, it is issuing step commands through the exposed api of a headless delve debugger process.
-#### Node
+#### [VSCode](https://code.visualstudio.com/docs/editor/debugging) 
+Consider how the VSCode IDE debugs go applications when using the [go extensions](https://marketplace.visualstudio.com/items?itemName=golang.Go). It simply functions as a debugger client to the go delve debugger. When stepping through code, it is issuing step commands through the exposed api of a headless delve debugger process.
+#### [Node](https://nodejs.org/en/docs/guides/debugging-getting-started/)
 In the case of a nodejs application, when you launch node with the --inspect switch, a node process listens at address 127.0.0.1:9229 for a debugging client.
-#### Chrome
-The [VSCode  chrome debugger](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) also lets  VSCode function as a debugger client when chrome is launched with remote debugging turned on. When remote debugging is turned on, the debugging api is accessible though port 9222 of the running chrome process
+#### [Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+The VSCode chrome debugger also enables VSCode function as a debugger client when chrome is launched with remote debugging turned on. When remote debugging is turned on, the debugging api is accessible though port 9222 of the running chrome process
 
-#### Delve and GDB
-Some debuggers also have a built in text interface that can also function as a debugger client. This allows the debugger to connect and communicate with another debugger instance through its api in a debugging session. This debugger process could be on the same machine or on another machine. Figure 1 illustrates the relationship between these  entities.
+#### [Delve](https://github.com/go-delve/delve) and [GDB](https://www.gnu.org/software/gdb/)
+Some debuggers also have a built in text interface that can also function as a debugger client. This allows the debugger to connect and communicate with another debugger instance through its api in a debugging session. This debugger process could be on the same machine or on another machine using ssh. 
+
+Figure 1 illustrates the relationship between these entities outline above.
 
 ##### Figure 1 : Debugger
 ![Debugger Interactions](images/debugger.svg "Figure 1")

@@ -11,7 +11,7 @@ In order to inspect the run time state of a program, it is helpful to be able to
   - **Debugger Client**
   The part that interacts with the user and enables the display of observed information.
 
-These parts could be packaged up into one program, like the Chrome web browser that enables debugging javascript. Alternatively this could be split up into several cooperating programs that collectivly enable this capability. An example of this is the go Delve debugger that used by VSCode in the the [go extensions](https://marketplace.visualstudio.com/items?itemName=golang.Go).
+These parts could be packaged up into one program, like the Chrome web browser that enables debugging javascript. Alternatively this could be split up into several cooperating programs that collectively enable this capability. An example of this cooperating trio is the Delve debugger that used by VSCode in the the [Go extension for VSCode](https://marketplace.visualstudio.com/items?itemName=golang.Go).
 
 ## Debugger
 

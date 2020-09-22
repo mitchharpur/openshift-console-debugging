@@ -2,7 +2,7 @@
 
 ## Debuggers
 
-A **debugger** works by taking control of the execution of a process. The process being debugged could be an already running process or it could be one that is started by the debugger. The mechanism used to take control of a process for debugging relies on system level calls. For more detail on how this works on a linux based machine, the following article outlines this for linux in more detail: 
+A **debugger** operates by taking control of the execution and inspection of a process. The process being debugged could be an already running process or it could be one that is started by the debugger itself. The mechanism used to take control of a process for debugging relies on system level calls. For more detail on how this works on a linux based machine, the following article outlines this for linux in more detail: 
 [How debuggers really work](https://opensource.com/article/18/1/how-debuggers-really-work)
 
 ### Debuggee
@@ -11,7 +11,7 @@ When a process is being debugged, it participates in a debugging session. The pr
 
 ### Debugger Client
 
-A debugger usually exposes an **api** that allows one or more **debugger clients** to interact with it. The **debugger client** could be a visual interface or it could be a text based one at the terminal. Text base clients are useful when debugging over a remote connection such as ssh. The **debugger client** issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling agent. Note that if the debugee exposes ports, that these ports are seperate to the port exposed by the debugger, and thus need to have different values.
+A debugger usually exposes an **api** that allows one or more **debugger clients** to interact with it. This api is used to send debugging execution and inspection commands and also to communicate the debuggee state to the client. The **debugger client** could be a visual interface or it could be a text based one at the terminal. Text based clients are useful when debugging over a remote connection using ssh or other cases where the debugger cannot have a user interface as a result of being on a remote machine. The **debugger client** issues commands using the debugger api in order to step through the debuggee and view its state, but the debugger is always the controlling agent. Note that if the debuggee exposes ports, that these ports are seperate to the port exposed by the debugger api. and thus need to have different values or there will be a clash.
 Figure 1 illustrates the relationship between these mentioned entities.
 
 ##### Figure 1 : Debugger

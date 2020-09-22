@@ -11,7 +11,7 @@ When a process is being debugged, it participates in a debugging session. The pr
 
 ### Debugger Client
 
-A debugger usually exposes an api that allows one or more debugger clients to interact with it. The **debugger client** could be a visual interface or it could be a text based one at the terminal. The **debugger client** issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling agent.
+A debugger usually exposes an **api** that allows one or more **debugger clients** to interact with it. The **debugger client** could be a visual interface or it could be a text based one at the terminal. Text base clients are useful when debugging over a remote connection such as ssh. The **debugger client** issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling agent. Note that if the debugee exposes ports, that these ports are seperate to the port exposed by the debugger, and thus need to have different values.
 Figure 1 illustrates the relationship between these mentioned entities.
 
 ##### Figure 1 : Debugger

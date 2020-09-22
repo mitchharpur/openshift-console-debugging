@@ -50,6 +50,7 @@ Some debuggers also have a built in text interface that can also function as a d
 
 There are several things to keep in mind when debugging
 
+
 - Understanding the structure and run-time behavior of the application being debugged will help with debugging.
 - Understand that there is a difference between **attaching** a debugger to a running application and **launching** a program in the debugging state.
 - Understand that it will be easier to debug a "go" application if it has been compiled with the correct options. When a debugger is attached to an already running binary, it is possible that the binary has been compiled with optimizations enabled. This will make it more difficult to debug. The binary may need to be recompiled with these optimizations disabled.

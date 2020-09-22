@@ -3,11 +3,14 @@
 ## Sum of the parts
 
 In order to inspect the run time state of a program, it is helpful to be able to control the runtime execution of a program and observe its state at any point. This is where a debugger proves useful. However, there are three parts to this capability:
-    - **Debuggee** : The program being debugged. i.e. an executable binary or a web script running in a browser.
-    - **Debugger** : The part controlling the debuggee
-    - **Debugger Client** : The part that displays the observed information and interacts with the user.
+  - **Debuggee**
+  The part being debugged. this could be an executable binary or a web script running in a browser.
+  - **Debugger**
+  The part controlling the debuggee.
+  - **Debugger Client**
+  The part that displays the observed information and interacts with the user.
 
-## Debuggers
+## Debugger
 
 A **debugger** operates by taking control of the execution and inspection of a process. The process being debugged could be an already running process or it could be one that is started by the debugger itself. The mechanism used to take control of a process for debugging relies on system level calls. For more detail on how this works on a linux based machine, the following article outlines this for linux in more detail: 
 [How debuggers really work](https://opensource.com/article/18/1/how-debuggers-really-work)

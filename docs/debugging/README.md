@@ -1,5 +1,12 @@
 # A little about debuggers and debugging in general
 
+## Sum of the parts
+
+In order to inspect the run time state of a program, it is helpful to be able to control the runtime execution of a program and observe its state at any point. This is where a debugger proves useful. However, there are three parts to this capability:
+    - **Debuggee** : The program being debugged. i.e. an executable binary or a web script running in a browser.
+    - **Debugger** : The part controlling the debuggee
+    - **Debugger Client** : The part that displays the observed information and interacts with the user.
+
 ## Debuggers
 
 A **debugger** operates by taking control of the execution and inspection of a process. The process being debugged could be an already running process or it could be one that is started by the debugger itself. The mechanism used to take control of a process for debugging relies on system level calls. For more detail on how this works on a linux based machine, the following article outlines this for linux in more detail: 
@@ -11,7 +18,7 @@ When a process is being debugged, it participates in a debugging session. The pr
 
 ### Debugger Client
 
-A debugger usually exposes an **api** that allows one or more **debugger clients** to interact with it. This api is used to send debugging execution and inspection commands and also to communicate the debuggee state to the client. The **debugger client** could be a visual interface or it could be a text based one at the terminal. Text based clients are useful when debugging over a remote connection using ssh or other cases where the debugger cannot have a user interface as a result of being on a remote machine. The **debugger client** issues commands using the debugger api in order to step through the debuggee and view its state, but the debugger is always the controlling agent. Note that if the debuggee exposes ports, that these ports are seperate to the port exposed by the debugger api. and thus need to have different values or there will be a clash.
+A debugger usually exposes an **api** that enables one or more **debugger clients** to interact with it. This api is used to send debugging execution and inspection commands. It is also used to communicate the debuggee execution state to the client for display. The **debugger client** could be a visual interface or it could be a text based one at the terminal. Text based clients are useful when debugging over a remote connection using ssh or other cases where the debugger cannot have a user interface as a result of being on a remote machine. The **debugger client** issues commands using the debugger api in order to step through the debuggee and view its state, but the debugger is always the controlling agent. Note that if the debuggee exposes ports, that these ports are seperate to the port exposed by the debugger api. and thus need to have different values or there will be a clash.
 Figure 1 illustrates the relationship between these mentioned entities.
 
 ##### Figure 1 : Debugger

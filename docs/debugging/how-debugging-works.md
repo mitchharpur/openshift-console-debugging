@@ -34,13 +34,13 @@ Figure 1 illustrates the relationship between these mentioned entities.
 
 ### Examples
 
-#### [VSCode](https://code.visualstudio.com/docs/editor/debugging) 
+#### [VSCode Debugging](https://code.visualstudio.com/docs/editor/debugging) 
 Consider how the VSCode IDE debugs go applications when using the [go extension](https://marketplace.visualstudio.com/items?itemName=golang.Go). It it simply functioning as a debugger client to the go delve debugger. When stepping through code, it is issuing step commands through the exposed api of a headless delve debugger process.
 
-#### [Node](https://nodejs.org/en/docs/guides/debugging-getting-started/)
+#### [Node Debugging](https://nodejs.org/en/docs/guides/debugging-getting-started/)
 In the case of a nodejs application, when you launch node with the --inspect switch, a node process listens at address 127.0.0.1:9229 for a debugging client.
 
-#### [Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+#### [Chrome Debugging](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
 The VSCode chrome debugger also enables VSCode function as a debugger client when chrome is launched with remote debugging turned on. When remote debugging is turned on, the debugging api is accessible though port 9222 of the running chrome process
 
 #### [Delve](https://github.com/go-delve/delve) and [GDB](https://www.gnu.org/software/gdb/)

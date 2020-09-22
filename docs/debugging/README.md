@@ -8,7 +8,6 @@ When a process is being debugged, it participates in a debugging session.The pro
 The debugger usually exposes an api that allows one or more debugger clients to interact with it. The debugger client could be a visual interface or a text based one. The debugger client issues commands using the debugger api in order to step through the debugee and view its state. This is how the VSCode IDE debugs go applications using the delve go debugger. Some debuggers also have a built in text interface that functions as a debugger client. This allows the debugger to also function as a debugger client in a debugging session.
 
 
-![Debugger](images/debugger.png)
 ![SVG](images/debugger.svg)
 [How debuggers work](https://opensource.com/article/18/1/how-debuggers-really-work)
 

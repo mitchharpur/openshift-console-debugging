@@ -6,7 +6,7 @@ A debugger works by taking control of the execution of a process. The process be
 When a process is being debugged, it participates in a debugging session.The process being debugged is called the debuggee. In a debugging session the debugger is able to view and manipulate the state of the debuggee in addition to controlling its execution.
 
 The debugger usually exposes an api that allows one or more debugger clients to interact with it. The debugger client could be a visual interface or a text based one. The debugger client issues commands using the debugger api in order to step through the debugee and view its state. This is how the VSCode IDE debugs go applications using the delve go debugger. Some debuggers also have a built in text interface that functions as a debugger client. This allows the debugger to also function as a debugger client in a debugging session.
-<div style="background-color:#CCCCCC;padding:20px;">
+<div style="background-color:#CCCAAA;padding:20px;">
 
 ![SVG](images/debugger.svg)
 

@@ -1,4 +1,4 @@
-# A little about debuggers and debugging
+# A little about debuggers and debugging in general
 
 ## Debuggers
 

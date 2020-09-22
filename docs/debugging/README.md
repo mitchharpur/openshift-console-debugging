@@ -11,7 +11,7 @@ When a process is being debugged, it participates in a debugging session. The pr
 ### Debugger Client
 
 A debugger usually exposes an api that allows one or more debugger clients to interact with it. The **debugger client** could be a visual interface or it could be a text based one at the terminal. The **debugger client** issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling agent.
-This is how the VSCode IDE debugs go applications when using the go extensions. It simply functions as a debugger client to the go delve debugger. When stepping through code, it is issuing step commands through using the exposed api of a headless delve debugger process.
+This is how the VSCode IDE debugs go applications when using the go extensions. It simply functions as a debugger client to the go delve debugger. When stepping through code, it is issuing step commands through the exposed api of a headless delve debugger process.
 
 Debuggers usually have a built in text interface that effectively functions as a debugger client. This allows the debugger to also function as a debugger client and communicate with another debugger instance through its api in a debugging session. This debugger process could be on the same machine or on another machine. Figure 1 illustrates the relationship between these  entities.
 

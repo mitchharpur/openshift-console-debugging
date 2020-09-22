@@ -18,7 +18,7 @@ In the case of a nodejs application, when you launch node with the --inspect swi
 #### Chrome
 The [VSCode  chrome debugger](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) also lets  VSCode function as a debugger client when chrome is launched with remote debugging turned on. When remote debugging is turned on, the debugging api is accessible though port 9222 of the running chrome process
 
-
+#### Delve and GDB
 Some debuggers also have a built in text interface that can also function as a debugger client. This allows the debugger to connect and communicate with another debugger instance through its api in a debugging session. This debugger process could be on the same machine or on another machine. Figure 1 illustrates the relationship between these  entities.
 
 ##### Figure 1 : Debugger

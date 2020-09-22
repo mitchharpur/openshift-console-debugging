@@ -2,7 +2,8 @@
 
 ## Debuggers
 
-A **debugger** works by taking control of the execution of a process. The process being debugged could be an already running process or it could be one that is started by the debugger. The mechanism used to take control of a process for debugging relies on system level calls.
+A **debugger** works by taking control of the execution of a process. The process being debugged could be an already running process or it could be one that is started by the debugger. The mechanism used to take control of a process for debugging relies on system level calls. For more detail on how this works on a linux based machine, the following article outlines this for linux in more detail: 
+[How debuggers really work](https://opensource.com/article/18/1/how-debuggers-really-work)
 
 ### Debuggee
 
@@ -28,8 +29,7 @@ The VSCode chrome debugger also enables VSCode function as a debugger client whe
 Some debuggers also have a built in text interface that can also function as a debugger client. This allows the debugger to connect and communicate with another debugger instance through its api in a debugging session. This debugger process could be on the same machine or on another machine using ssh. 
 
 
-For more detail on how this works on a linux based machine, the following article outlines this for linux in more detail: 
-[How debuggers really work](https://opensource.com/article/18/1/how-debuggers-really-work)
+
 
 ## Considerations
 

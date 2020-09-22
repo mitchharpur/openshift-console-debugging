@@ -1,4 +1,4 @@
 {
     "go.autocompleteUnimportedPackages": true,
-    "terminal.integrated.cwd": "workSpaceRoot"
+    "terminal.integrated.cwd": "."
 }

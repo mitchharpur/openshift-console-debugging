@@ -11,6 +11,12 @@ When a process is being debugged, it participates in a debugging session. The pr
 ### Debugger Client
 
 A debugger usually exposes an api that allows one or more debugger clients to interact with it. The **debugger client** could be a visual interface or it could be a text based one at the terminal. The **debugger client** issues commands using the debugger api in order to step through the debugee and view its state, but the debugger is always the controlling agent.
+Figure 1 illustrates the relationship between these mentioned entities.
+
+##### Figure 1 : Debugger
+![Debugger Interactions](images/debugger.svg "Figure 1")
+
+### Examples
 #### [VSCode](https://code.visualstudio.com/docs/editor/debugging) 
 Consider how the VSCode IDE debugs go applications when using the [go extensions](https://marketplace.visualstudio.com/items?itemName=golang.Go). It simply functions as a debugger client to the go delve debugger. When stepping through code, it is issuing step commands through the exposed api of a headless delve debugger process.
 #### [Node](https://nodejs.org/en/docs/guides/debugging-getting-started/)
@@ -21,10 +27,6 @@ The VSCode chrome debugger also enables VSCode function as a debugger client whe
 #### [Delve](https://github.com/go-delve/delve) and [GDB](https://www.gnu.org/software/gdb/)
 Some debuggers also have a built in text interface that can also function as a debugger client. This allows the debugger to connect and communicate with another debugger instance through its api in a debugging session. This debugger process could be on the same machine or on another machine using ssh. 
 
-Figure 1 illustrates the relationship between these entities outline above.
-
-##### Figure 1 : Debugger
-![Debugger Interactions](images/debugger.svg "Figure 1")
 
 For more detail on how this works on a linux based machine, the following article outlines this for linux in more detail: 
 [How debuggers really work](https://opensource.com/article/18/1/how-debuggers-really-work)

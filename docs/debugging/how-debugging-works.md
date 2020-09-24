@@ -2,7 +2,7 @@
 
 ## Sum of the parts
 
-In order to inspect the run time state of a program, it is helpful to be able to control the runtime execution of the program and observe its state at any point during its execution. This is where a debugger proves useful. There are three parts that are neccesary to enable this capability:
+In order to inspect the run time state of a program, the capability to control the runtime execution of the program and observe its state at any point during its execution is very helpful. This is what a debugger does. There are three conceptual parts that are neccesary to enable this capability:
 
   - **Debuggee** : 
   The part being debugged. This could be an executable binary or a web script running in a browser.

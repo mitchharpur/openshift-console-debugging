@@ -2,33 +2,42 @@
 
 If you do not have go installed, more detailed instructions can be found [here](https://golang.org/doc/install).
 
-  - Mac
-    ## [Using direct download](https://golang.org/doc/install)
-    ## [Using homebrew](https://docs.brew.sh)  
+  ## Mac
+    ### [Using direct download](https://golang.org/doc/install)
+    ### [Using homebrew](https://docs.brew.sh)
 
     ```sh
     brew install go
     ```
     This will yield something like the following:
     ![brew install](images/brew-install-go.jpg)
-  - Fedora
-    ## [Using direct download](https://golang.org/doc/install)
-    ## [Using homebrew](https://docs.brew.sh/Homebrew-on-Linux)
-    
-    ```sh
-    brew install go 
-    ```
-    ## [Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.h) 
-    ```sh
-    sudo dnf install golang  
-    ```
-    > **Note:** dnf is the method to get the best results on fedora
-  > **Note :** Verify that $GOPATH is set
-  > **Test :**
+  ## Fedora
+
+  ### [Using direct download](https://golang.org/doc/install)
+
+  ### [Using homebrew](https://docs.brew.sh/Homebrew-on-Linux)
+
   ```sh
-   go version # should print go version
-   echo $GOPATH # should point to ~/go by befault ... unless specifically set otherwise
-   go env # should contain valid path values ... yours may differ 
-   ```
-   The output will yield something like the following
-   ![go version](images/go-version.jpg)
+  brew install go
+  ```
+
+  ### [Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.html)
+  ```sh
+    sudo dnf install golang
+  ```
+  > **Note:**  dnf is the method to get the best results on fedora
+
+  # Verify Go Installation
+  ## Check go version
+  ```sh
+  go version # should print the go version
+  ```
+  The output will yield something similar to the following
+
+  ![go version](images/go-version.jpg)
+
+  ## Verify that $GOPATH is set to a valid location
+  ```sh
+  echo $GOPATH # should point to ~/go by befault ... unless specifically set otherwise
+  go env # should contain valid path values ... yours may differ
+  ```

@@ -34,7 +34,7 @@ If you are interested in installing go from source, more detailed instructions c
   ```sh
   go version # should print the go version
   ```
-  The output will yield something similar to the following,depending on the platform
+  The output will yield something similar to the following, depending on the platform
 
   ![go version](images/go-version.jpg)
 

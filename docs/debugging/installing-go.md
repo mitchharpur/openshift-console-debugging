@@ -9,7 +9,7 @@ If you are interested in installing go from source, more detailed instructions c
   ```sh
   brew install go
   ```
-  The output should display something similar to what is show below:
+  The output should display something similar to what is shown below:
 
   ![brew install](images/brew-install-go.jpg)
   ### 2. [Using direct download](https://golang.org/doc/install)
@@ -36,10 +36,10 @@ If you are interested in installing go from source, more detailed instructions c
   ```sh
   go version # should print the go version
   ```
-  The output should display something similar to what is shown below, depending on the platform
-  - mac
+  The output should display something similar to what is shown below, depending on the platform and version installed.
+  - Mac
   ![go version mac](images/go-version.jpg)
-  - fedora
+  - Fedora
   ![go version linux](images/go-version-linux.jpg)
 
   ## 2. Verify that $GOPATH is set to a valid location

@@ -1,6 +1,6 @@
 # Installing Go
 
-If you do not have go installed, more detailed instructions can be found [here](https://golang.org/doc/install).
+More detailed instructions on installong go can be found [here](https://golang.org/doc/install).
 
   ## Mac
   There are several ways to install go on a mac

@@ -9,7 +9,7 @@ If you are interested in installing go from source, more detailed instructions c
   ```sh
   brew install go
   ```
-  This will yield something like the following:
+  The output should display something similar to what is show below:
 
   ![brew install](images/brew-install-go.jpg)
   ### 2. [Using direct download](https://golang.org/doc/install)
@@ -34,7 +34,7 @@ If you are interested in installing go from source, more detailed instructions c
   ```sh
   go version # should print the go version
   ```
-  The output will yield something similar to the following, depending on the platform
+  The output should display something similar to what is shown below, depending on the platform
 
   ![go version](images/go-version.jpg)
 

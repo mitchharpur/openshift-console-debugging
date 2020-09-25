@@ -1,6 +1,6 @@
 # Installing Go
 
-More detailed instructions on installong go can be found [here](https://golang.org/doc/install).
+If you are interested in installing go from source, more detailed instructions can be found [here](https://golang.org/doc/install).The instructions below focus on using [homebrew](https://docs.brew.sh) for a mac and [dnf](https://fedoraproject.org/wiki/DNF) for fedora linux . Note that [homebrew can now also be used on linux if so preferred](https://docs.brew.sh/Homebrew-on-Linux)
 
   ## Mac
   There are several ways to install go on a mac

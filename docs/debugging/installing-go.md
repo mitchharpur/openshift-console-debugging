@@ -41,5 +41,13 @@ If you are interested in installing go from source, more detailed instructions c
   ## 2. Verify that $GOPATH is set to a valid location
   ```sh
   echo $GOPATH # should point to ~/go by befault ... unless specifically set otherwise
+  ```
+  In the output below, the logged in user is 'developer'
+  
+  ![go path](images/go-path-linux.jpg)
+  
+  ## 3. Verify that your go evironment has valid path values
+  ```sh
   go env # should contain valid path values ... yours may differ
   ```
+  ![go env](images/go-env-linux.jpg)

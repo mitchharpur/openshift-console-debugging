@@ -29,7 +29,7 @@ If you are interested in installing go from source, more detailed instructions c
   brew install go
   ```
 
-  # Verify your Go Installation
+  # Verify the Go Installation
   ## 1. Check go version
   ```sh
   go version # should print the go version

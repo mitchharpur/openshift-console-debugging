@@ -50,6 +50,6 @@ If you are interested in installing go from source, more detailed instructions c
   
   ## 3. Verify that your go evironment has valid path values
   ```sh
-  go env # should contain valid path values ... yours may differ
+  go env # should contain valid path values ... yours may differ if you used homebrew , dnf or direct download
   ```
   ![go env](images/go-env-linux.jpg)

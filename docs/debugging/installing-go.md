@@ -36,14 +36,15 @@ If you are interested in installing go from source, more detailed instructions c
   ```
   The output should display something similar to what is shown below, depending on the platform
 
-  ![go version](images/go-version.jpg)
+  ![go version mac](images/go-version.jpg)
+  ![go version linux](images/go-version-linux.jpg)
 
   ## 2. Verify that $GOPATH is set to a valid location
   ```sh
   echo $GOPATH # should point to ~/go by befault ... unless specifically set otherwise
   ```
   In the output below, the logged in user is 'developer'
-  
+
   ![go path](images/go-path-linux.jpg)
   
   ## 3. Verify that your go evironment has valid path values

@@ -4,32 +4,32 @@ If you do not have go installed, more detailed instructions can be found [here](
 
   ## Mac
   There are several ways to install go on a mac
-  ### 1.[Using direct download](https://golang.org/doc/install)
-  ### 2.[Using homebrew](https://docs.brew.sh)
+  ### 1.[Using homebrew](https://docs.brew.sh)
 
   ```sh
   brew install go
   ```
   This will yield something like the following:
   ![brew install](images/brew-install-go.jpg)
+  ### 2.[Using direct download](https://golang.org/doc/install)
+
   ## Fedora
   There are several ways to install go on fedora
 
-  ### 1.[Using direct download](https://golang.org/doc/install)
+  ### 1.[Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.html)
+  ```sh
+  sudo dnf install golang
+  ```
+  > **Note:**  dnf is the method to get the best results on fedora
+  ### 2.[Using direct download](https://golang.org/doc/install)
 
-  ### 2.[Using homebrew](https://docs.brew.sh/Homebrew-on-Linux)
+  ### 3.[Using homebrew](https://docs.brew.sh/Homebrew-on-Linux)
 
   ```sh
   brew install go
   ```
 
-  ### 3.[Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.html)
-  ```sh
-  sudo dnf install golang
-  ```
-  > **Note:**  dnf is the method to get the best results on fedora
-
-  # Verify Go Installation
+  # Verify your Go Installation
   ## Check go version
   ```sh
   go version # should print the go version

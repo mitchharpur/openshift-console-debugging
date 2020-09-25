@@ -21,6 +21,8 @@ If you are interested in installing go from source, more detailed instructions c
   ```sh
   sudo dnf install golang
   ```
+  ![dnf go install](images/go-install-dnf.jpg)
+
   ### 2. [Using direct download](https://golang.org/doc/install)
 
   ### 3. [Using homebrew](https://docs.brew.sh/Homebrew-on-Linux)

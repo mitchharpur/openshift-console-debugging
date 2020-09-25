@@ -35,8 +35,9 @@ If you are interested in installing go from source, more detailed instructions c
   go version # should print the go version
   ```
   The output should display something similar to what is shown below, depending on the platform
-
+  - mac
   ![go version mac](images/go-version.jpg)
+  - fedora
   ![go version linux](images/go-version-linux.jpg)
 
   ## 2. Verify that $GOPATH is set to a valid location

@@ -11,7 +11,7 @@ In order to inspect the run time state of a program, the capability to control t
   - **Debugger Client** : 
   The part that interacts with the user and enables debugging commands and the display of observed information.
 
-These parts can be packaged up into one host program, like the Chrome web browser that enables debugging of javascript. Alternatively, this could be split up into several cooperating programs that collectively enable this capability. An example of this cooperating trio is the [Delve](https://github.com/go-delve/delve) debugger that used by VSCode in the the [Go extension for VSCode](https://marketplace.visualstudio.com/items?itemName=golang.Go).
+These parts can be packaged up into one host program, like the Chrome web browser that enables debugging of javascript. Alternatively, this could be split up into several cooperating programs that collectively enable this capability. An example of this cooperating trio is the [Delve](https://github.com/go-delve/delve) debugger that used by VSCode in the the [Go extension for VSCode](https://marketplace.visualstudio.com/items?itemName=golang.Go). If these parts are well put together the result is an experience that is greater than the sum of the parts.
 
 ## Debugger
 
@@ -30,11 +30,11 @@ A debugger usually exposes an **api** that enables one or more **debugger client
 Figure 1 illustrates the relationship between these mentioned entities.
 
 ##### Figure 1 : Debugger
-![Debugger Interactions](images/debugger.svg "Figure 1")
+![Debugger Interactions](images/debugger.svg "Figure 1" )
 
 ### Examples
 
-#### [VSCode Debugging](https://code.visualstudio.com/docs/editor/debugging) 
+#### [VSCode Debugging](https://code.visualstudio.com/docs/editor/debugging)
 Consider how the VSCode IDE debugs go applications when using the [go extension](https://marketplace.visualstudio.com/items?itemName=golang.Go). It it simply functioning as a debugger client to the go delve debugger. When stepping through code, it is issuing step commands through the exposed api of a headless delve debugger process.
 
 #### [Node Debugging](https://nodejs.org/en/docs/guides/debugging-getting-started/)
@@ -51,7 +51,7 @@ Some debuggers also have a built in text interface that can also function as a d
 There are several things to keep in mind when debugging
 
 
-- Understanding the structure and run-time behavior of the application being debugged will help with debugging.
+- Understanding the structure and run-time behavior of the application being debugged will help with debugging, especially for web applications.
 - Understand that there is a difference between **attaching** a debugger to a running application and **launching** a program in the debugging state.
 - Understand that it will be easier to debug a "go" application if it has been compiled with the correct options. When a debugger is attached to an already running binary, it is possible that the binary has been compiled with optimizations enabled. This will make it more difficult to debug. The binary may need to be recompiled with these optimizations disabled.
 - Using a debugger to **launch** a binary is typically easier to automate from within an IDE because it is not necessary to determine the process id (pid) to attach to.  For web applications, debugging is a little more complicated because the application is effectively Javascript running in a browser, and so launching vs attaching each have their own constraints depending on the browser being used. 

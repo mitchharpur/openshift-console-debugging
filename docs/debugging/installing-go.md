@@ -3,8 +3,9 @@
 If you do not have go installed, more detailed instructions can be found [here](https://golang.org/doc/install).
 
   ## Mac
-  ### [Using direct download](https://golang.org/doc/install)
-  ### [Using homebrew](https://docs.brew.sh)
+  There are several ways to install go on a mac
+  ### 1.[Using direct download](https://golang.org/doc/install)
+  ### 2.[Using homebrew](https://docs.brew.sh)
 
   ```sh
   brew install go
@@ -12,18 +13,19 @@ If you do not have go installed, more detailed instructions can be found [here](
   This will yield something like the following:
   ![brew install](images/brew-install-go.jpg)
   ## Fedora
+  There are several ways to install go on fedora
 
-  ### [Using direct download](https://golang.org/doc/install)
+  ### 1.[Using direct download](https://golang.org/doc/install)
 
-  ### [Using homebrew](https://docs.brew.sh/Homebrew-on-Linux)
+  ### 2.[Using homebrew](https://docs.brew.sh/Homebrew-on-Linux)
 
   ```sh
   brew install go
   ```
 
-  ### [Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.html)
+  ### 3.[Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.html)
   ```sh
-    sudo dnf install golang
+  sudo dnf install golang
   ```
   > **Note:**  dnf is the method to get the best results on fedora
 

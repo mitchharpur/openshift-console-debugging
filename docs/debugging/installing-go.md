@@ -4,10 +4,12 @@ If you do not have go installed, more detailed instructions can be found [here](
 
   - Mac
     - [Using direct download](https://golang.org/doc/install)
-    - [Using homebrew](https://docs.brew.sh)  
+    ## [Using homebrew](https://docs.brew.sh)  
+
     ```sh
      brew install go
     ```
+    This will yield something like the following:
     ![brew install](images/brew-install-go.jpg)
   - Fedora
     - [Using direct download](https://golang.org/doc/install)

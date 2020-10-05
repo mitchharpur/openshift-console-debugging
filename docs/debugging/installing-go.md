@@ -1,6 +1,6 @@
 # Installing Go
 
-If you are interested in installing go from source, more detailed instructions can be found [here](https://golang.org/doc/install). The instructions below focus on using [homebrew](https://docs.brew.sh) for a mac and [dnf](https://fedoraproject.org/wiki/DNF) for fedora linux . Note that [homebrew can now also be used on linux if so preferred](https://docs.brew.sh/Homebrew-on-Linux)
+If you are interested in installing go from source, more detailed instructions can be found [here](https://golang.org/doc/install). The instructions below focus on using the [homebrew](https://docs.brew.sh) package manager for a mac and [dnf](https://fedoraproject.org/wiki/DNF) for fedora linux . Note that [homebrew can now also be used on linux if so preferred](https://docs.brew.sh/Homebrew-on-Linux)
 
   ## Mac
   There are several ways to install go on a mac
@@ -18,9 +18,12 @@ If you are interested in installing go from source, more detailed instructions c
   There are several ways to install go on fedora
 
   ### 1. [Using dnf](https://developer.fedoraproject.org/tech/languages/go/go-installation.html)
+
   ```sh
   sudo dnf install golang
   ```
+  The output should display something similar to what is shown below:
+
   ![dnf go install](images/dnf-install-go.jpg)
 
   ### 2. [Using direct download](https://golang.org/doc/install)
@@ -49,7 +52,7 @@ If you are interested in installing go from source, more detailed instructions c
   In the output below, the logged in user is 'developer'
 
   ![go path](images/go-path-linux.jpg)
-  
+
   ## 3. Verify that your go evironment has valid path values
   ```sh
   go env # should contain valid path values ... yours may differ if you used homebrew , dnf or direct download

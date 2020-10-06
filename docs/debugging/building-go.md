@@ -12,9 +12,9 @@ The following command build the console with debug optimizations disabled:
 go build -gcflags=’all=-N -l’ -o ./bin/bridge ./cmd/bridge
 ```
 
-These optimizations are automatically disabled when launching a debug session using the delve **debug** command.
+To be clear, these optimizations are automatically disabled when launching a debug session using the delve **debug** command.
 
-However, when using delve **attach** to attach to a running process, these optimizations should be disabled when building the binary as illustrated below :
+However, when using delve **attach** to attach to an already running process, these optimizations should be disabled when building the binary as illustrated below :
 
 >Note that the output binary is specifically specified, as is the folder with the source files containing the main package. 
 

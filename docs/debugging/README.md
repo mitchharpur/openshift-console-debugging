@@ -2,7 +2,7 @@
 ## Understanding the openshift console
 ### [Overview](console-overview.md)
 ### [Repository](console-git-repository.md)
-
+### [Respository Structure](console-git-repository-structure.md)
 ## Debuggers
 ### [How debugging works](how-debugging-works.md)
 ## Setup

@@ -5,10 +5,10 @@
 ## Debuggers
 - ### [How debugging works](how-debugging-works.md)
 ## Setup
-- ### [Installing the go compiler](installing-go.md)
-- ### [Installing the delve debugger](installing-delve.md)
+- ### [Install the go compiler](installing-go.md)
+- ### [Install the delve debugger](installing-delve.md)
 - ### [Install the jq utility](install-jq.md)
-- ### [Install VSCode Extensions](install-vscode-extensions.md)
+- ### [Install the required VSCode Extensions](install-vscode-extensions.md)
 ## Build Considerations
 - ### [Disabling optimizations in go binaries](building-go-for-debugging.md)
 ## Debugging

@@ -1,3 +1,7 @@
+# Repository
+
+The console's [git repository](https://github.com/openshift/console) is a [monorepo](https://en.wikipedia.org/wiki/Monorepo) that contains the source code for the web application (front end) as well as the source code for the cluster proxy (backend). It is helpful how the major pieces fit together and how the repository is structured. From a development perspective, this is important because it impacts how to debug the application. It also impacts how the artifacts created from a build are arranged. These artifacts are important when debugging the application because metadata about them is usually encoded into distributed runtime artifacts. 
+
 # Repository Structure
 
 It is helpful to have a basic understanding of the console repository structure. There are a lot of files in the repository, but there are certain key files that serve as ‘entry’ points from a logical code flow perspective. Knowing these key entry points is helpful to understanding a high level overview of the console monorepo paradigm. Remember that a monorepo means that both the typescript web application and the go bridge binary source code are all together in the same repository. Normally projects are separated by language. Not so here. The key parts of the repository are outlined below:

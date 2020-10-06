@@ -26,4 +26,4 @@ The bridge executable is launched using the examples/run-bridge.sh script and us
 These certificates and secrets need to be updated every time the user logs in to a cluster, because an API bearer token is used in making API requests from the web application to the cluster proxy.
 
 ## 4) Debugging Shell Scripts
-The scripts used to debug the application are actually part of [this](https://github.com/mitchharpur/openshift-console-debugging) repository. These scripts are added to the console project using the instructions outlined [here](https://github.com/mitchharpur/openshift-console-debugging) . These scripts all sctart with debug-* and add a .vscode folder to the projects in order to setup integrated debugging in VSCode.
+The scripts used to debug the application are actually part of [this](https://github.com/mitchharpur/openshift-console-debugging) repository. These scripts are added to the console project using the instructions outlined [here](https://github.com/mitchharpur/openshift-console-debugging/tree/master/docs/debugging) . These scripts all sctart with debug-* and add a .vscode folder to the projects in order to setup integrated debugging in VSCode.

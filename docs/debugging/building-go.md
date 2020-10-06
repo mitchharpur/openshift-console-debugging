@@ -7,11 +7,12 @@ These optimizations include things such as **function inlining** and **registeri
 In order to disable these optimizations, the 
 ``` -gcflags=’all=-N -l’ ``` option should be used when building an application that is to be part of a debugging session.
 
+The following command build the console with debug optimizations disabled:
 ```bash
 go build -gcflags=’all=-N -l’ -o ./bin/bridge ./cmd/bridge
 ```
 
-These optimizations are automatically disabled when launching a debug session using the delve debug command. 
+These optimizations are automatically disabled when launching a debug session using the delve **debug** command.
 
 However, when using delve **attach** to attach to a running process, these optimizations should be disabled when building the binary as illustrated below :
 

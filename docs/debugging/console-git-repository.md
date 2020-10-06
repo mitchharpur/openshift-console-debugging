@@ -1,3 +1,0 @@
-# Repository
-
-The console's [git repository](https://github.com/openshift/console) is a [monorepo](https://en.wikipedia.org/wiki/Monorepo) that contains the source code for the web application (front end) as well as the source code for the cluster proxy (backend). It is helpful how the major pieces fit together and how the repository is structured. From a development perspective, this is important because it impacts how to debug the application. It also impacts how the artifacts created from a build are arranged. These artifacts are important when debugging the application because metadata about them is usually encoded into distributed runtime artifacts. 

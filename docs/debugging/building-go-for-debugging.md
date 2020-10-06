@@ -7,7 +7,7 @@ These optimizations include things such as **function inlining** and **registeri
 In order to disable these optimizations, the 
 ``` -gcflags=’all=-N -l’ ``` option should be used when building an application that is to be part of a debugging session.
 
-The following command build the console with debug optimizations disabled:
+The following command, when run from the repository root, will build the console with debug optimizations disabled:
 ```bash
 go build -gcflags=’all=-N -l’ -o ./bin/bridge ./cmd/bridge
 ```

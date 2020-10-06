@@ -1,7 +1,11 @@
 # Debugging the openshift console
-
-## [How debugging works](how-debugging-works.md)
-Explains how debuggers work
-## [Installing go](installing-go.md)
-## [Installing delve](installing-delve.md)
-
+## Debuggers
+### [How debugging works](how-debugging-works.md)
+## Setup
+### [Installing go](installing-go.md)
+### [Installing delve](installing-delve.md)
+## Build
+### [Disabling optimizations](building-go.md)
+## Debugging
+### [Debugging go from the terminal](debugging-go-from-the-terminal.md)
+### [Debugging go from the IDE]()

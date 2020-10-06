@@ -1,4 +1,4 @@
-# Build with optimizations turned off
+# Build your go project with optimizations turned off
 
 Before you use the delve debugger on a particular application,  it is important to remember that the Go compiler performs several optimizations that make it difficult to debug a program. 
 

@@ -10,11 +10,11 @@
 - ### [Install the jq utility](install-jq.md)
 - ### [Install the required VSCode Extensions](install-vscode-extensions.md)
 - ### Things to verify :
-  > Verify that $GOPATH is a valid value and ``` go version ; go env ``` both return valid values
+  > Verify that ```echo $GOPATH``` is a valid value and ``` go version ; go env ``` both return valid values
 
-  > Verify that $GOPATH/bin is in the system path
+  > Verify that ```echo $GOPATH/bin``` is in the system path
 
-  > Verify that delve is installed  by checking if``` dlv version; ``` returns a valid value
+  > Verify that delve is installed  by checking if ``` dlv version; ``` returns a valid value
 ## Build Considerations
 - ### [Disabling optimizations in go binaries](building-go-for-debugging.md)
 ## Debugging

@@ -9,8 +9,7 @@
 - ### [Install the delve debugger](installing-delve.md)
 - ### [Install the jq utility](install-jq.md)
 - ### [Install the required VSCode Extensions](install-vscode-extensions.md)
-- ### Things to verify :
-  > Verify that 
+- ### Things to verify : 
   ```bash
   # These should all return valid values:
   echo $GOPATH;

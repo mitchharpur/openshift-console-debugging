@@ -1,4 +1,7 @@
 # Debugging Go from the terminal
+In order to debug a go program  from the terminal, there are two scenarios
+- **Launch** : Compile and lauch the binary in debug mode in one step.
+- **Attach** : Attach the debugger to an already running program that has been compiled with optimizations disabled.
 
 ## Launch
 To compile, launch, and debug a Go program from the terminal in one step, you can use the [dlv debug](https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_debug.md) command. 
@@ -55,12 +58,12 @@ In the headless scenarios mentioned above, the debugger  is now:
 
 Once the debugger client is connected, you can continue to set break-points, step through the code, etc. 
 Commands: 
-- c - will continue execution of the executable
-- r - will restart the debuggee process
-- b main.main and then c - will set a breakpoint on the main package and continue to that point
+- **c** - will continue execution of the executable
+- **r** - will restart the debuggee process
+- **b** main.main and then c - will set a breakpoint on the main package and continue to that point
 Subsequent n - will step through the code. 
-- p [variable name] - will print the value of the variable 
-- q - will quit the debugging session. Note: If you are connected to a headless delve process via the dlv connect, typing q will prompt to end the headless server too.
+- **p** [variable name] - will print the value of the variable 
+- **q** - will quit the debugging session. Note: If you are connected to a headless delve process via the dlv connect, typing q will prompt to end the headless server too.
 
 The meaning of the various dlv debug flags are explained in more detail [here](https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv.md).
 

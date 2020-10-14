@@ -19,7 +19,7 @@ To start an **interactive** terminal based debug session, type the following:
 
 ![dlv debug](images/dlv-debug-1.jpg)
 
-This command will compile the main package in ./cmd/bridge/main.go to the ./bin/bridge executable, and it will then automatically **launch** the executable into a **paused** state with the debugger attached to the process.
+This command will compile the **main package** in *./cmd/bridge/main.go* to the *./bin/bridge* executable, and it will then automatically **launch** the executable into a **paused** state with the debugger attached to the process.
 
 This should produce an *interactive terminal* output something resembling the following:
 

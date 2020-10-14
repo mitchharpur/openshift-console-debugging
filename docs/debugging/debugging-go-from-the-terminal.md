@@ -25,6 +25,8 @@ This should produce an *interactive terminal* output something resembling the fo
 
 ![dlv debug](images/dlv-debug-2.jpg)
 
+At this point you can interact with the debugger.
+
 ![dlv debug](images/dlv-debug-3.jpg)
 
 Other interactions with the debugger as outlined [here](https://github.com/go-delve/delve/blob/master/Documentation/cli/README.md) .

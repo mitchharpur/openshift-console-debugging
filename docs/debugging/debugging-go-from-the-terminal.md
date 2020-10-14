@@ -14,8 +14,11 @@ The dlv debug command automatically disables optimizations when compiling, so th
 
 The delve debugger can be launched in **headless** mode or in **interactive** mode. 
 
-**Headless mode** means that you use a **debugger client** to interact with the debugger and invoke debugging commands.
-The [Go for VS Code extension](https://marketplace.visualstudio.com/items?itemName=golang.go) enables VS Code to function as a debugger client. The delve binary can also function as a terminal based debugger client when the **delve connect** command is used to connect to another delve process instance that is running in headless mode in another terminal
+**Headless mode** means that a **debugger client** is used to interact with the debugger, as opposed to terminal based commands. 
+
+VS Code can be used as a debugger client when the [Go for VS Code extension](https://marketplace.visualstudio.com/items?itemName=golang.go) is installed. 
+
+The delve debugger can also function as a terminal based debugger client to an existing debugging session. This is achieved by using the **delve connect** command to connect to the debugging session running in headless mode in another terminal. It could be on the same machine or a remote machine, as long as the ports are accessible.
 
 To start an **interactive** terminal based debug session, type the following:
 

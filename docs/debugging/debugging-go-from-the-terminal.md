@@ -1,7 +1,9 @@
 # Debugging Go from the terminal
-In order to debug a go program  from the terminal, there are two scenarios
-- **Launch** : Compile and lauch the binary in debug mode in one step.
-- **Attach** : Attach the debugger to an already running program that has been compiled with optimizations disabled.
+In order to debug a go program  from the terminal, there are two scenarios:
+- ### Launch
+>Compile and lauch the binary in debug mode in one step.
+- ### Attach
+>Attach the debugger to an already running program that has been compiled with optimizations disabled.
 
 ## Launch
 To compile, launch, and debug a Go program from the terminal in one step, you can use the [dlv debug](https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_debug.md) command. 

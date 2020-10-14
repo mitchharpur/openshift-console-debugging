@@ -12,14 +12,15 @@ As previously mentioned, the dlv debug command automatically disables optimizati
 
 You can launch the delve debugger in a **headless** mode or in **interactive** mode. 
 
-Headless mode means that you use a debugger client to interact with the debugger.
-The [Go for VS Code extension](https://marketplace.visualstudio.com/items?itemName=golang.go) enables VS Code to function as a debugger client. Delve can also operate as a terminal based debugger client when the delve connect command is used from another terminal.
+**Headless mode** means that you use a debugger client to interact with the debugger.
+The [Go for VS Code extension](https://marketplace.visualstudio.com/items?itemName=golang.go) enables VS Code to function as a debugger client. Delve can also operate as a terminal based debugger client when the **delve connect** command is used from another terminal.
 
 To start an **interactive** terminal based debug session, type the following:
 
 ![dlv debug](images/dlv-debug-1.jpg)
 
-This command will compile the main package in ./cmd/bridge/main.go to the ./bin/bridge executable, and it will then automatically **launch** the executable into a **paused** state.
+This command will compile the main package in ./cmd/bridge/main.go to the ./bin/bridge executable, and it will then automatically **launch** the executable into a **paused** state with the debugger attached to the process.
+
 This should produce an *interactive terminal* output something resembling the following:
 
 ![dlv debug](images/dlv-debug-2.jpg)

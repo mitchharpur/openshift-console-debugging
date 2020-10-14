@@ -19,21 +19,21 @@ To start an **interactive** terminal based debug session, type the following:
 
 ![dlv debug](images/dlv-debug-1.jpg)
 
-This command will compile the **main package** in *./cmd/bridge/main.go* to the *./bin/bridge* executable, and it will then automatically **launch** the executable into a **paused** state with the debugger attached to the process.
+This command will compile the **main package** in *./cmd/bridge/main.go* to the *./bin/bridge* executable, and it will then automatically **launch** the executable into a **paused** state with the debugger attached to the running process.
 
 This should produce an *interactive terminal* output something resembling the following:
 
 ![dlv debug](images/dlv-debug-2.jpg)
 
-At this point you can interact with the debugger.
+At this point it is possible interact with the debugger.
 
 ![dlv debug](images/dlv-debug-3.jpg)
 
-Other interactions with the debugger as outlined [here](https://github.com/go-delve/delve/blob/master/Documentation/cli/README.md) .
+Other interactions with the debugger are outlined [here](https://github.com/go-delve/delve/blob/master/Documentation/cli/README.md) .
 
-In this **interactive mode**, you are interacting directly with the debugger. However, when the debugger runs in **headless mode**, then it functions like a server. 
+In this **interactive mode** , direct interaction with the debugger is enabled. However, when the debugger runs in **headless mode**, then it functions more like a server that can receive debugger commands.
 
-In this headless mode, it exposes a debugging api that can be accessed using a debugger client. A debugger client sends commands to the debugger to control the debugging session. VS Code can function as a debugger client. In order to do this it is necessary to [install the go extensions for VS Code](https://marketplace.visualstudio.com/items?itemName=golang.Go). It automatically launches the delve debugger in headless mode and [connects to the api](https://github.com/go-delve/delve/tree/master/Documentation/api), providing a great debugger-client experience. [JetBrains Goland can do the same](https://www.jetbrains.com/help/go/debugging-code.html). 
+In this **headless mode**, the debugger exposes a debugging api that can be accessed using a **debugger client**. A debugger client sends commands to the debugger to control the debugging session. VS Code can function as a debugger client. In order to do this it is necessary to [install the go extensions for VS Code](https://marketplace.visualstudio.com/items?itemName=golang.Go). This extension automatically launches the delve debugger in headless mode and [connects to the api](https://github.com/go-delve/delve/tree/master/Documentation/api), providing a great debugger-client experience. [JetBrains Goland can do the same](https://www.jetbrains.com/help/go/debugging-code.html). 
 
 The IDE’s mentioned have the capability to automatically launch the delve debugger, but you may want more fine grained control over this experience. To manually launch the delve debugger in headless mode, you must use the --headless flag. The --accept-multiclient flag is also used if there is a need to *simultaneously connect several debugger clients* to the debugger (i.e both the IDE and the delve terminal client). Finally, the --listen flag allows a specific location and port to be used to expose the API. This is specifically helpful when remote debugging, where firewall restrictions may be in place. Note that it is not secure.
 

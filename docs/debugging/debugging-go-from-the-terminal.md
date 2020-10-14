@@ -10,12 +10,12 @@ To compile, launch, and debug a Go program from the terminal in one step, you ca
 
 It’s the easiest way to debug from the terminal. 
 
-As previously mentioned, the dlv debug command automatically disables optimizations when compiling, so there is no need to remember which build flags to use. 
+The dlv debug command automatically disables optimizations when compiling, so there is no need to remember which build flags to use. 
 
-You can launch the delve debugger in a **headless** mode or in **interactive** mode. 
+The delve debugger can be launched in **headless** mode or in **interactive** mode. 
 
-**Headless mode** means that you use a debugger client to interact with the debugger.
-The [Go for VS Code extension](https://marketplace.visualstudio.com/items?itemName=golang.go) enables VS Code to function as a debugger client. Delve can also operate as a terminal based debugger client when the **delve connect** command is used from another terminal.
+**Headless mode** means that you use a **debugger client** to interact with the debugger and invoke debugging commands.
+The [Go for VS Code extension](https://marketplace.visualstudio.com/items?itemName=golang.go) enables VS Code to function as a debugger client. The delve binary can also function as a terminal based debugger client when the **delve connect** command is used to connect to another delve process instance that is running in headless mode in another terminal
 
 To start an **interactive** terminal based debug session, type the following:
 

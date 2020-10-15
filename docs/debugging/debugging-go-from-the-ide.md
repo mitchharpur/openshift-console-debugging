@@ -98,61 +98,60 @@ Create a bash shell script that dynamically creates the environment representing
 
   - [Repo](https://github.com/mitchharpur/openshift-console-debugging)
 
-  - debug-install-plugins.sh
-  
-  Installs the requisite VSCode plugins used for debugging
-  
-  - debug-clean.sh
-  
-  Removes all debug- files but not .vscode files as they may be pre-existing.
-  
-  - debug-download.sh
-  
-  Downloads all the debug-* scripts and .vscode files. Old .vscode files are backed up
-  
-  - debug-environment.sh
-  
-  Creates an environment file containing the serialized environment variables needed by bridge
+  - Description of files:
 
-  - debug-environment.env
+    - debug-install-plugins.sh
+      Installs the requisite VSCode plugins used for debugging
 
-  The created environment file containing the debug environment parameters for the current debug session.
+    - debug-clean.sh
+      Removes all debug- files but not .vscode files as they may be pre-existing.
 
-  - debug-get-cs-certificate.sh
+    - debug-download.sh
+      Downloads all the debug-* scripts and .vscode files. Old .vscode files are backed up
 
-  Retrieve the certificate for the current logged in cluster and save it to ./examples/ca.crt
+    - debug-environment.sh
+      Creates an environment file containing the serialized environment variables needed by bridge
+    
+    - debug-environment.env
+      The created environment file containing the debug environment parameters for the current debug session.
 
-  - debug-get-oauth-secret.sh
+    - debug-get-cs-certificate.sh
+      Retrieve the certificate for the current logged in cluster and save it to ./examples/ca.crt
 
-Retrieves the api authentication secret and saves it to  ./examples/console-client-secret
+    - debug-get-oauth-secret.sh
+      Retrieves the api authentication secret and saves it to  ./examples/console-client-secret
 
-  - debug-launch.sh
-  Compiles and launches bridge into a delve debug session that can be connected to from a debugger client
-  - debug-connect.sh
-  Attaches to a delve debugger session as a terminal based debugger client.
-  - .vscode/launch.json
-  The VS Code launch configuration
-- Configurations:
-  1) Debug: Launch the Console Frontend
-  2) Debug: Launch the Console Backend
-Note that this has a preLaunchTask that creates/updates the environment file.
-  3) Debug: Attach to a running console backend
-- Inputs: 
-The inputs listed below  are read out of the environment file
-  1) consoleClusterUrl
-  2) consoleAlertManagerUrl
-  3) consoleThanosUrl
-  4) consoleHostName
-  5) consoleApiPort
-  6) debuggeeProcessId 
-Note: This input prompts the user to select the pid of a running bridge. It is not read out of the environment file.
+    - debug-launch.sh
+      Compiles and launches bridge into a delve debug session that can be connected to from a debugger client
+    
+    - debug-connect.sh
+      Attaches to a delve debugger session as a terminal based debugger client.
+    
+    - .vscode/launch.json
+      The VS Code launch configuration
+      - Configurations:
+        1) Debug: Launch the Console Frontend
+        2) Debug: Launch the Console Backend
+           Note that this has a preLaunchTask that creates/updates the environment file.
+        3) Debug: Attach to a running console backend
+          - Inputs: 
+            The inputs listed below  are read out of the environment file
+            1) consoleClusterUrl
+            2) consoleAlertManagerUrl
+            3) consoleThanosUrl
+            4) consoleHostName
+            5) consoleApiPort
+            6) debuggeeProcessId 
+            Note: This input prompts the user to select the pid of a running bridge. It is not read out of the environment file.
 
-- **.vscode/tasks.json**
-  Tasks can be launched by cmd + shift + p
-See linux vscode shortcuts
-The VS Code tasks
-  1) LaunchConsoleDebugger
-An independent task that launches the console
+    - **.vscode/tasks.json**
+      Tasks can be launched by cmd + shift + p
+      See linux vscode shortcuts
+      The VS Code tasks
+      1) LaunchConsoleDebugger
+         An independent task that launches the console
 
-  2) SetConsoleDebugEnvironment
-The task called as a preLaunchTask in the launch configuration|
+      2) SetConsoleDebugEnvironment
+         The task called as a preLaunchTask in the launch configuration
+
+

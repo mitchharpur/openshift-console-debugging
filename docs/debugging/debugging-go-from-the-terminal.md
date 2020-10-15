@@ -43,12 +43,12 @@ A list of interactions and commands is outlined [here](https://github.com/go-del
 ### Headless mode
 When the delve debugger is launched in **headless mode**, it functions as a server that can receive debugger commands.
 
-When the debugger is run in **headless mode**, it exposes a debugging api that can be accessed using a **debugger client**. The debugger client sends commands to the debugger via the api to control the debugging session. 
+When the debugger is run in **headless mode**, it exposes a debugging api that can be accessed using a **debugger client**. The debugger client sends commands to the debugger via the api to control the debugging session.
 
 #### Debugger Clients
 
 ##### [VSCode](https://code.visualstudio.com/)
-VSCode can function as a **debugger client** for the delve debugger if the [go extensions for VS Code](https://marketplace.visualstudio.com/items?itemName=golang.Go) are installed. These vscode extensions have the capability to automatically launch the delve debugger in headless mode and [connect to the api](https://github.com/go-delve/delve/tree/master/Documentation/api), providing a great integrated debugger client experience. 
+VSCode can function as a **debugger client** for the delve debugger if the [go extensions for VS Code](https://marketplace.visualstudio.com/items?itemName=golang.Go) are installed. These vscode extensions have the capability to automatically launch the delve debugger in headless mode and [connect to the api](https://github.com/go-delve/delve/tree/master/Documentation/api), providing a great integrated debugger client experience.
 
 ##### [Goland](https://www.jetbrains.com/help/go/debugging-code.html)
 The JetBrains Goland IDE also offer this debugger client functionality and user experience, but without the need for any extensions.
@@ -61,14 +61,17 @@ The IDE’s that have been mentioned have the capability to automatically launch
 Finally, the **--listen** flag allows a specific location and port to be used to expose the API. This is specifically helpful when remote debugging, where firewall restrictions may be in place. Note that there are security implications of opening the debugging port.
 
 #### Example
-Running in **headless** mode would look something like this:
+##### Launching the headless server
+To run the debugger in **headless** mode, it would look something like this:
 
 ![dlv debug](images/dlv-debug-4.jpg)
 
 ![dlv debug](images/dlv-debug-5.jpg)
 
+##### Passing in debuggee arguments
 Note that if the program being debugged (the debuggee) has any arguments, you would add them after the -- separator as highlighted in the above example . The bridge executable has several arguments, as shown in ./examples/run-bridge.sh. file
 
+##### Connecting to the headless server
 At this point you can connect to the headless server using the **delve connect** command
 
 ![dlv debug](images/dlv-debug-6.jpg)
@@ -82,7 +85,7 @@ In the headless scenario mentioned above, the debugger  is now:
 - logging output to the terminal
 - started in the paused state (adding the **--continue** flag will start executing the code immediately)
 - The debugger client ( VSCode, delve ,Jetbrains etc) issues debugging commands through the api
-
+##### Debugger client commands
 Once the debugger client is connected, you can continue to set break-points, step through the code, etc. 
 Commands: 
 - **c** - will continue execution of the executable

@@ -48,7 +48,8 @@ When the debugger is run in **headless mode**, it exposes a debugging api that c
 #### Debugger Clients
 
 ##### [VSCode](https://code.visualstudio.com/)
-VSCode can function as a **debugger client** for the delve debugger if the [go extensions for VS Code](https://marketplace.visualstudio.com/items?itemName=golang.Go) are installed. The vscode extension will automatically launch the delve debugger in headless mode and [connect to the api](https://github.com/go-delve/delve/tree/master/Documentation/api), providing a great debugger client experience. 
+VSCode can function as a **debugger client** for the delve debugger if the [go extensions for VS Code](https://marketplace.visualstudio.com/items?itemName=golang.Go) are installed. These vscode extensions have the capability to automatically launch the delve debugger in headless mode and [connect to the api](https://github.com/go-delve/delve/tree/master/Documentation/api), providing a great integrated debugger client experience. 
+
 ##### [Goland](https://www.jetbrains.com/help/go/debugging-code.html)
 The JetBrains Goland IDE also offer this debugger client functionality and user experience, but without the need for any extensions.
 

@@ -129,28 +129,31 @@ Create a bash shell script that dynamically creates the environment representing
     - **.vscode/launch.json**
       The VS Code launch configuration
       - Configurations:
-        1) Debug: Launch the Console Frontend
-        2) Debug: Launch the Console Backend
-           Note that this has a preLaunchTask that creates/updates the environment file.
-        3) Debug: Attach to a running console backend
-          - Inputs: 
-            The inputs listed below  are read out of the environment file
-            1) consoleClusterUrl
-            2) consoleAlertManagerUrl
-            3) consoleThanosUrl
-            4) consoleHostName
-            5) consoleApiPort
-            6) debuggeeProcessId 
-            Note: This input prompts the user to select the pid of a running bridge. It is not read out of the environment file.
+        1) **Debug**:
+        Launch the Console Frontend
+        2) **Debug**:
+        Launch the Console Backend
+        Note that this has a preLaunchTask that creates/updates the environment file.
+        3) **Debug**:
+        Attach to a running console backend
+        4) **Inputs**:
+        The inputs listed below  are read out of the created debug-environment.env environment file
+          - **consoleClusterUrl**
+          - **consoleAlertManagerUrl**
+          - **consoleThanosUrl**
+          - **consoleHostName**
+          - **consoleApiPort**
+          - **debuggeeProcessId**
+          Note: This input prompts the user to select the pid of a running bridge. It is not read out of the environment file.
 
     - **.vscode/tasks.json**
       Tasks can be launched by cmd + shift + p
       See linux vscode shortcuts
       The VS Code tasks
-      1) LaunchConsoleDebugger
-         An independent task that launches the console
+      - **LaunchConsoleDebugger**
+      An independent task that launches the console
 
-      2) SetConsoleDebugEnvironment
-         The task called as a preLaunchTask in the launch configuration
+      - **SetConsoleDebugEnvironment**
+      The task called as a preLaunchTask in the launch configuration.
 
 

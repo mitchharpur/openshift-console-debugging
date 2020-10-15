@@ -1,5 +1,5 @@
 # Openshift Console Debugging
-Debug shell script overlays to help debugging the [Openshift console](https://github.com/openshift/console) in VSCode.
+Debug shell script overlays to help debugging the [Openshift console](https://github.com/openshift/console) in VSCode. This includes an integrated debugging experience.
 
 
 # Instructions

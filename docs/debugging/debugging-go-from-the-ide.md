@@ -31,3 +31,28 @@ The following extensions provide capabilities to support this strategy.
   - [Repo](https://github.com/mikestead/vscode-dotenv)
 - [Tasks Shell Input](https://marketplace.visualstudio.com/items?itemName=augustocdias.tasks-shell-input) : Use shell commands as input for your tasks .This is helpful when determining the runtime pid of a process needing to be debugged. This extension will prompt the user to select the result of a shell script
   - [Repo](https://github.com/augustocdias/vscode-shell-command)
+
+### Strategy
+
+In order to parameterize the information required to compile and run and debug the bridge binary, the parameters must be identified. All the developer should need to do is to log in to the cluster. The implementation of this strategy could be one or more shell scripts that can be run as a unit. These scripts would be run when the user elects to debug the application from within VS Code.
+
+#### Identify the parameters for the bridge binary
+
+Based on what arguments are needed to launch the bridge executable, we determine the bridge parameters needed. These parameters are outlined in ./examples/run-backend.sh. The bash commands used were obtained from quick start 
+
+- **Web application base address**
+
+  When running on the developer desktop, the address part of this value can be one of four values. Adding extra routes onto the address may be necessary (e.g localhost/web ) to get the web application to work in a cluster. This value gets prepended to  urls in the web application. The value corresponds to a html base address
+  - **localhost**: {port}
+This may be the same as the loopback adapter, but sometimes it is configured to be something else.
+  - **127.0.0.1**: {port} 
+This address is the loopback or local-only interface/adapter. It is a fake network adapter that can only communicate within the same host.
+  - **0.0.0.0**: {port}
+This address means “listen on every available network interface and allow binding to all addresses”. The loopback adapter with address 127.0.0.1 , from the perspective of the process looks like any other network adapter on the machine , so a server listening on 0.0.0.0 will accept connections on the loopback adapter too.  In TCP stacks this is known as INADDR_ANY . The main benefit of 0.0.0.0 over 127.0.0.1 from a debugging perspective is that you can connect to 0.0.0.0 from another computer using the machine ip address. This is helpful when using other proxy tools (like charles proxy) to intercept and troubleshoot traffic. Using 127.0.0.1 will not allow this scenario.
+  - **machine-name**: {port}
+This address is usually available in $HOSTNAME environment variable. 
+
+- **Cluster endpoint**
+
+Get the url of the currently logged in cluster.
+

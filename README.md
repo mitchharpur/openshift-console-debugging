@@ -13,7 +13,7 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
 
 
   ```
-  The result or outcome of running this script will be debug drop down options in VSCode that will offer the options to launch the go console backend in debugging mode. By setting a break point in the go file, an integrated VSCode debugging experience will be possible. As long as a cluster has been logged into there should be no need for any other steps for an integrated debugging experience.
+  The result or outcome of running this script will be debug drop down options in VSCode that will offer the options to launch the go console backend in debugging mode (as shown below). By setting a break point in the go file of choice, an integrated VSCode debugging experience will now be possible. As long as a cluster has been logged into there should be no need for any other steps for an integrated VSCode debugging experience.
 
   ![setup result](docs/debugging/images/setup-result-1.jpg)
 

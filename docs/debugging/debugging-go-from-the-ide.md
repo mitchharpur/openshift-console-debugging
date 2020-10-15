@@ -91,14 +91,13 @@ Get the url of the thanos url. Thanos is long term storage for cluster metrics.
 ![dlv debug](images/dlv-ide-debug-4.jpg)
 
 
-
 ### Solution
 
 Create a bash shell script that dynamically creates the environment representing the parameters needed to run the console bridge binary. The environment is a combination of setting environment variables and creating a corresponding environment file.  The script will be run as a vscode task that runs prior to running a vscode launch configuration. This environment file can be read using the [Command Variable extension](https://marketplace.visualstudio.com/items?itemName=rioj7.command-variable) using variable substitution into a vscode debug launch configuration .
 
-  - [#### Repo](https://github.com/mitchharpur/openshift-console-debugging)
+  - #### [Solution Repo](https://github.com/mitchharpur/openshift-console-debugging)
 
-  - #### Description of repo files:
+  - #### Description of solution files:
 
     - **debug-install-plugins.sh**
       Installs the requisite VSCode plugins used for debugging

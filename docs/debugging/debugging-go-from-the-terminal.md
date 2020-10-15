@@ -27,7 +27,8 @@ To start an **interactive** terminal based debug session, use the **dlv debug** 
 
 ![dlv debug](images/dlv-debug-1.jpg)
 
-This debug command will compile the go **main package** source code in *./cmd/bridge/main.go*, and produce the binary in  *./bin/bridge* executable. If the comilation is successful, the debugger will then automatically **launch** and attach to the executable in a **paused** state. A paused state means that the executable will be started but will not run untill the **continue** command is issued
+This debug command will compile the go **main package** source code in *./cmd/bridge/main.go*, and produce the executable binary in  *./bin/bridge*. 
+If the comilation is successful, the debugger will then automatically **launch** and attach to the executable in a **paused** state. A paused state means that the executable will be started but will not run untill the **continue** command is issued
 
 The *interactive terminal* output will resembling the following:
 
@@ -60,12 +61,12 @@ At this point you can connect to the headless server using the **delve connect**
 
 ![dlv debug](images/dlv-debug-7.jpg)
 
-In the headless scenarios mentioned above, the debugger  is now:
+In the headless scenario mentioned above, the debugger  is now:
 - listening on port  2345  for any extra debugger clients (for --accept-multiclient )
 - using  v2  of the api
-- running in headless mode and accept connections from multiple clients 
+- running in headless mode and accepts connections from multiple clients 
 - logging output to the terminal
-- started in the paused state (adding the --continue flag will start executing the code immediately)
+- started in the paused state (adding the **--continue** flag will start executing the code immediately)
 - The debugger client ( VSCode, delve ,Jetbrains etc) issues debugging commands through the api
 
 Once the debugger client is connected, you can continue to set break-points, step through the code, etc. 

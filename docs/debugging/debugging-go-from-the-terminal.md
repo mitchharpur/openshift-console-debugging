@@ -113,6 +113,7 @@ To manually attach to a running Go binary, if possible and for best results, fir
 ![dlv debug](images/dlv-debug-8.jpg)
 
 Start the executable with the correct arguments (as shown in ./examples/start-bridge.sh) and then attach the debugger to the process.
+
 First determine the process id of the running executable (bridge in this case) and attach:
 
 ![dlv debug](images/dlv-debug-9.jpg)
@@ -121,6 +122,6 @@ Then connect to the debugger from another terminal as in previous examples.
 
 ![dlv debug](images/dlv-debug-10.jpg)
 
-Alternatively if you want to attach in interactive mode as opposed to headless mode.
+Alternatively if there is a need to attach in interactive mode as opposed to headless mode.
 
 ![dlv debug](images/dlv-debug-11.jpg)

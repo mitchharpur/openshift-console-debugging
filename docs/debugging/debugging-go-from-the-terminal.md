@@ -47,8 +47,8 @@ When the debugger is run in **headless mode**, it exposes a debugging api that c
 
 #### Debugger Clients
 
-##### dlv
-The delve debugger can also be used as a terminal based debugger client. When using the delve debugger as a client to connect to an existing debugging session, the **dlv connect** command enables this capability.
+##### [dlv connect](https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_connect.md)
+As previously stated, the delve debugger can also be used as a terminal based debugger client. When using the delve debugger as a client to control an existing debugging session, the **dlv connect** command enables this capability.
 
 
 ##### [VSCode](https://code.visualstudio.com/)

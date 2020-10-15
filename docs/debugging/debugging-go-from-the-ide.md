@@ -147,14 +147,15 @@ In order to automate all of the information and steps mentioned above, the solut
           - **debuggeeProcessId**
           Note: This input prompts the user to select the pid of a running bridge. It is not read out of the environment file.
 
-    - ##### **.vscode/tasks.json**
-      Tasks can be launched by cmd + shift + p.
-      See linux vscode shortcuts
-      The VS Code tasks
-      - ###### **LaunchConsoleDebugger**
-      An independent task that launches the console
+   - ##### **.vscode/tasks.json**
+   Tasks can be launched by **cmd + shift + p**.
+   See linux vscode shortcuts
+   
+  The VS Code tasks
+   - ###### **LaunchConsoleDebugger**
+   An independent task that launches the console
 
-      - ###### **SetConsoleDebugEnvironment**
-      The task that is called as a preLaunchTask in the launch configuration.
+   - ###### **SetConsoleDebugEnvironment**
+   The task that is called as a preLaunchTask in the launch configuration.
 
 

@@ -93,11 +93,12 @@ Get the url of the thanos url. Thanos is long term storage for cluster metrics.
 
 ### Solution
 
-Create a bash shell script that dynamically creates the environment representing the parameters needed to run the console bridge binary. The environment is a combination of setting environment variables and creating a corresponding environment file.  The script will be run as a vscode task that runs prior to running a vscode launch configuration. This environment file can be read using the [Command Variable extension](https://marketplace.visualstudio.com/items?itemName=rioj7.command-variable) using variable substitution into a vscode debug launch configuration .
+In order to automate all of the information and steps mentioned above, the solution to a bash shell script that dynamically creates the environment representing the parameters needed to run the console bridge binary. The environment is a combination of setting environment variables and creating a corresponding environment file.  The script will be run as a vscode task that runs prior to running a vscode launch configuration. This environment file can be read using the [Command Variable extension](https://marketplace.visualstudio.com/items?itemName=rioj7.command-variable) using variable substitution into a vscode debug launch configuration .
 
-  - #### [Solution Repo](https://github.com/mitchharpur/openshift-console-debugging)
+  - #### [Solution Github Repository](https://github.com/mitchharpur/openshift-console-debugging)
 
   - #### Description of solution files:
+  The descriptions below explain the role of each script in implementing the automated solution
 
     - ##### **debug-install-plugins.sh**
       Installs the requisite VSCode plugins used for debugging
@@ -147,7 +148,7 @@ Create a bash shell script that dynamically creates the environment representing
           Note: This input prompts the user to select the pid of a running bridge. It is not read out of the environment file.
 
     - ##### **.vscode/tasks.json**
-      Tasks can be launched by cmd + shift + p
+      Tasks can be launched by cmd + shift + p.
       See linux vscode shortcuts
       The VS Code tasks
       - ###### **LaunchConsoleDebugger**

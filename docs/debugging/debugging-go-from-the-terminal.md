@@ -69,7 +69,7 @@ To run the debugger in **headless** mode, it would look something like this:
 ![dlv debug](images/dlv-debug-5.jpg)
 
 ##### Passing in debuggee arguments
-Note that if the program being debugged (the debuggee) has any arguments, you would add them after the -- separator as highlighted in the above example . The bridge executable has several arguments, as shown in ./examples/run-bridge.sh. file
+If the program being debugged (the debuggee) has any arguments, you would add them after the -- separator as highlighted in the above example . The bridge executable has several arguments, as shown in ./examples/run-bridge.sh. file
 
 ##### Connecting to the debug session
 At this point you can connect to the headless server using the **delve connect** command from another terminal

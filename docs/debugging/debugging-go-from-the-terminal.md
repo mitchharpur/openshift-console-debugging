@@ -23,22 +23,21 @@ The delve debugger can also function as a terminal based debugger client to an e
 
 ### Interactive Mode
 
-To start an **interactive** terminal based debug session, type the following:
+To start an **interactive** terminal based debug session, use the **dlv debug** command:
 
 ![dlv debug](images/dlv-debug-1.jpg)
 
-This command will compile the **main package** in *./cmd/bridge/main.go* to the *./bin/bridge* executable. If the comilation is successful, then the debugger will then automatically **launch** the executable into a **paused** state with the debugger attached to the running process.
+This command will compile the **main package** in *./cmd/bridge/main.go* to the *./bin/bridge* executable. If the comilation is successful, the debugger will automatically **launch** and attach to the executable a **paused** state. A paused state means that the executable will not run untill the **continue** command is issues
 
-This will produce an *interactive terminal* output something resembling the following:
+The *interactive terminal* output will resembling the following:
 
 ![dlv debug](images/dlv-debug-2.jpg)
 
-At this point it is possible directly interact with the debugger at the terminal and issues debug commands
+From this terminal, it is possible directly interact with the debugger and issue more debug commands.
 
 ![dlv debug](images/dlv-debug-3.jpg)
 
-Other interactions with the debugger are outlined [here](https://github.com/go-delve/delve/blob/master/Documentation/cli/README.md) .
-
+A list of interactions and commands is outlined [here](https://github.com/go-delve/delve/blob/master/Documentation/cli/README.md) .
 
 ### Headless mode
 When the debugger is launched in **headless mode**, then it functions more like a server that can receive debugger commands.

@@ -3,11 +3,11 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
 
 
 # Instructions
-- ## 1) Read [Debugging The Openshift Console](./docs/debugging/)
-  > This information will help you to understand how go debugging works in both VSCode and the terminal, and how that information is used to setup integrated debugging for the openshift console.
+## 1) Read [Debugging The Openshift Console](./docs/debugging/)
+  This information will help you to understand how go debugging works in both VSCode and the terminal, and how that information is used to setup integrated debugging for the openshift console.
 
-- ## 2) Run the VSCode Debugging Setup Script
-  >From the console VSCode <span style="color:red">**workspace folder**</span>, paste the following into a macOS Terminal or Linux shell prompt and press return. Its probably a good idea to do this on a seperate branch to ensure the scripts dont get checked into the master or primary branch.
+## 2) Run the VSCode Debugging Setup Script
+  From the console VSCode <span style="color:red">**workspace folder**</span>, paste the following into a macOS Terminal or Linux shell prompt and press return. Its probably a good idea to do this on a seperate branch to ensure the scripts dont get checked into the master or primary branch.
   ```sh
   /bin/bash -c "$(curl -fSLO raw.githubusercontent.com/mitchharpur/openshift-console-debugging/master/debug-download.sh ; chmod u+x debug-download.sh ; )"; ./debug-download.sh;  ./debug-setup.sh
 

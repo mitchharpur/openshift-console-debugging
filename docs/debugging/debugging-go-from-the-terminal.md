@@ -27,13 +27,13 @@ To start an **interactive** terminal based debug session, use the **dlv debug** 
 
 ![dlv debug](images/dlv-debug-1.jpg)
 
-This command will compile the **main package** in *./cmd/bridge/main.go* to the *./bin/bridge* executable. If the comilation is successful, the debugger will automatically **launch** and attach to the executable a **paused** state. A paused state means that the executable will not run untill the **continue** command is issues
+This debug command will compile the go **main package** source code in *./cmd/bridge/main.go*, and produce the binary in  *./bin/bridge* executable. If the comilation is successful, the debugger will then automatically **launch** and attach to the executable in a **paused** state. A paused state means that the executable will be started but will not run untill the **continue** command is issued
 
 The *interactive terminal* output will resembling the following:
 
 ![dlv debug](images/dlv-debug-2.jpg)
 
-From this terminal, it is possible directly interact with the debugger and issue more debug commands.
+From this terminal, it is possible to directly interact with the debugger and issue more debug commands as needed.
 
 ![dlv debug](images/dlv-debug-3.jpg)
 

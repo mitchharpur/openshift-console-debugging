@@ -24,4 +24,4 @@
 - ### [Disabling optimizations in go binaries](building-go-for-debugging.md)
 ## Debugging
 - ### [Debugging go from the terminal](debugging-go-from-the-terminal.md)
-- ### [Debugging go from the IDE]()
+- ### [Debugging go from the IDE](debugging-go-from-the-ide.md)

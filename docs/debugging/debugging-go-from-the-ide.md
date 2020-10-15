@@ -131,12 +131,12 @@ Create a bash shell script that dynamically creates the environment representing
       - Configurations:
         ###### 1) **Debug**:
         Launch the Console Frontend
-        2) **Debug**:
+        ###### 2) **Debug**:
         Launch the Console Backend
-        Note that this has a preLaunchTask that creates/updates the environment file.
-        3) **Debug**:
+        > Note that this has a **preLaunchTask** that creates/updates the environment file.
+        ###### 3) **Debug**:
         Attach to a running console backend
-        4) **Inputs**:
+        ###### 4) **Inputs**:
         The inputs listed below  are read out of the created debug-environment.env environment file
           - **consoleClusterUrl**
           - **consoleAlertManagerUrl**
@@ -146,14 +146,14 @@ Create a bash shell script that dynamically creates the environment representing
           - **debuggeeProcessId**
           Note: This input prompts the user to select the pid of a running bridge. It is not read out of the environment file.
 
-    - **.vscode/tasks.json**
+    - ##### **.vscode/tasks.json**
       Tasks can be launched by cmd + shift + p
       See linux vscode shortcuts
       The VS Code tasks
-      - **LaunchConsoleDebugger**
+      - ###### **LaunchConsoleDebugger**
       An independent task that launches the console
 
-      - **SetConsoleDebugEnvironment**
-      The task called as a preLaunchTask in the launch configuration.
+      - ###### **SetConsoleDebugEnvironment**
+      The task that is called as a preLaunchTask in the launch configuration.
 
 

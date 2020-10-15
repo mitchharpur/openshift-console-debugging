@@ -38,17 +38,17 @@ In order to parameterize the information required to compile and run and debug t
 
 #### Identify the parameters for the bridge binary
 
-Based on what arguments are needed to launch the bridge executable, we determine the bridge parameters needed. These parameters are outlined in ./examples/run-backend.sh. The bash commands used were obtained from quick start 
+Based on what arguments are needed to launch the bridge executable, we determine the bridge parameters needed. These parameters are outlined in ./examples/run-backend.sh. The bash commands used were obtained from [quick start](https://github.com/openshift/console#quickstart) 
 
 - **Web application base address**
 
-  When running on the developer desktop, the address part of this value can be one of four values. Adding extra routes onto the address may be necessary (e.g localhost/web ) to get the web application to work in a cluster. This value gets prepended to  urls in the web application. The value corresponds to a html base address
+  When running on the developer desktop, the address part of this value can be one of four values. Adding extra routes onto the address may be necessary (e.g localhost/web ) to get the web application to work in a cluster. This value gets prepended to  urls in the web application. The value corresponds to a [html base address](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base)
   - **localhost**: {port}
 This may be the same as the loopback adapter, but sometimes it is configured to be something else.
   - **127.0.0.1**: {port} 
 This address is the loopback or local-only interface/adapter. It is a fake network adapter that can only communicate within the same host.
   - **0.0.0.0**: {port}
-This address means “listen on every available network interface and allow binding to all addresses”. The loopback adapter with address 127.0.0.1 , from the perspective of the process looks like any other network adapter on the machine , so a server listening on 0.0.0.0 will accept connections on the loopback adapter too.  In TCP stacks this is known as INADDR_ANY . The main benefit of 0.0.0.0 over 127.0.0.1 from a debugging perspective is that you can connect to 0.0.0.0 from another computer using the machine ip address. This is helpful when using other proxy tools (like charles proxy) to intercept and troubleshoot traffic. Using 127.0.0.1 will not allow this scenario.
+This address means “listen on every available network interface and allow binding to all addresses”. The loopback adapter with address 127.0.0.1 , from the perspective of the process looks like any other network adapter on the machine , so a server listening on 0.0.0.0 will accept connections on the loopback adapter too.  In TCP stacks this is known as [INADDR_ANY](https://man7.org/linux/man-pages/man7/ip.7.html) . The main benefit of 0.0.0.0 over 127.0.0.1 from a debugging perspective is that you can connect to 0.0.0.0 from another computer using the machine ip address. This is helpful when using other proxy tools ([like charles proxy](https://www.charlesproxy.com/)) to intercept and troubleshoot traffic. Using 127.0.0.1 will not allow this scenario.
   - **machine-name**: {port}
 This address is usually available in $HOSTNAME environment variable. 
 
@@ -56,3 +56,36 @@ This address is usually available in $HOSTNAME environment variable.
 
 Get the url of the currently logged in cluster.
 
+![dlv debug](images/dlv-ide-debug-1.jpg)
+
+- **Console Client Secret file**
+
+Get the secret from the cluster and write it to the console-client-secret file.
+
+![dlv debug](images/dlv-ide-debug-2.jpg)
+
+
+- **Authentication Certificate Authority file**
+
+Get the certificate from the cluster. Its contents are extracted using the [jason query utility](https://stedolan.github.io/jq/), and then written to the ca.crt file.
+Note: This assumes that the [json query utility (jq)](https://stedolan.github.io/jq/) is installed i.e [brew install](https://brew.sh/) jq
+
+![dlv debug](images/dlv-ide-debug-3.jpg)
+
+
+- **Bridge api listen port**
+
+The location and port that accepts api requests from the static web application. Default is 9000
+
+- **[Alert Manager Url](https://www.openshift.com/blog/openshift-4-3-alertmanager-configuration)**
+
+Get the url of the [alert manager](https://www.openshift.com/blog/openshift-4-3-alertmanager-configuration)
+
+![dlv debug](images/dlv-ide-debug-4.jpg)
+
+
+- **[Thanos Url](https://www.openshift.com/blog/thanos-long-term-storage-for-your-prometheus-metrics-on-openshift)**
+
+Get the url of the thanos url. Thanos is long term storage for cluster metrics.
+
+![dlv debug](images/dlv-ide-debug-4.jpg)

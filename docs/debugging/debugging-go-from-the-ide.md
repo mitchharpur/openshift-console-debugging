@@ -96,38 +96,38 @@ Get the url of the thanos url. Thanos is long term storage for cluster metrics.
 
 Create a bash shell script that dynamically creates the environment representing the parameters needed to run the console bridge binary. The environment is a combination of setting environment variables and creating a corresponding environment file.  The script will be run as a vscode task that runs prior to running a vscode launch configuration. This environment file can be read using the [Command Variable extension](https://marketplace.visualstudio.com/items?itemName=rioj7.command-variable) using variable substitution into a vscode debug launch configuration .
 
-  - [Repo](https://github.com/mitchharpur/openshift-console-debugging)
+  - [#### Repo](https://github.com/mitchharpur/openshift-console-debugging)
 
-  - Description of files:
+  - #### Description of repo files:
 
-    - debug-install-plugins.sh
+    - **debug-install-plugins.sh**
       Installs the requisite VSCode plugins used for debugging
 
-    - debug-clean.sh
+    - **debug-clean.sh**
       Removes all debug- files but not .vscode files as they may be pre-existing.
 
-    - debug-download.sh
+    - **debug-download.sh**
       Downloads all the debug-* scripts and .vscode files. Old .vscode files are backed up
 
-    - debug-environment.sh
+    - **debug-environment.sh**
       Creates an environment file containing the serialized environment variables needed by bridge
     
-    - debug-environment.env
+    - **debug-environment.env**
       The created environment file containing the debug environment parameters for the current debug session.
 
-    - debug-get-cs-certificate.sh
+    - **debug-get-cs-certificate.sh**
       Retrieve the certificate for the current logged in cluster and save it to ./examples/ca.crt
 
-    - debug-get-oauth-secret.sh
+    - **debug-get-oauth-secret.sh**
       Retrieves the api authentication secret and saves it to  ./examples/console-client-secret
 
-    - debug-launch.sh
+    - **debug-launch.sh**
       Compiles and launches bridge into a delve debug session that can be connected to from a debugger client
     
-    - debug-connect.sh
+    - **debug-connect.sh**
       Attaches to a delve debugger session as a terminal based debugger client.
     
-    - .vscode/launch.json
+    - **.vscode/launch.json**
       The VS Code launch configuration
       - Configurations:
         1) Debug: Launch the Console Frontend

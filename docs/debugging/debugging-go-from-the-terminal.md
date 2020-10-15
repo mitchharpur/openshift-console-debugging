@@ -43,7 +43,7 @@ A list of interactions and commands is outlined [here](https://github.com/go-del
 ### Headless mode
 When the delve debugger is launched in **headless mode**, it functions as a server that can receive debugger commands.
 
-In **headless mode**, the debugger exposes a debugging api that can be accessed using a **debugger client**. The debugger client sends commands to the debugger via the api to control the debugging session. 
+When the debugger is run in **headless mode**, it exposes a debugging api that can be accessed using a **debugger client**. The debugger client sends commands to the debugger via the api to control the debugging session. 
 
 #### Debugger Clients
 

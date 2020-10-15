@@ -28,5 +28,13 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
   --token=7dDyxSKIumWvfkCWcwM_9A2vtwx8YiNEZsm9yyh-Ad0 --server=https://api.gitops2.devcluster.openshift.com:6443
   ```
 
+  In order to get this token , the correct login command can be retrieved from the openshift console as shown below
+
+  ![setup result](docs/debugging/images/console-login-token-1.jpg)
+
+  ![setup result](docs/debugging/images/console-login-token-2.jpg)
+
+  ![setup result](docs/debugging/images/console-login-token-3.jpg)
+
 
 

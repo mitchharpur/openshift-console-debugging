@@ -32,7 +32,10 @@ Debug shell script overlays to help debugging the [Openshift console](https://gi
 
   ![setup result](docs/debugging/images/console-login-token-1.jpg)
 
+  click the link show after selecting 'Copy Login Command'
   ![setup result](docs/debugging/images/console-login-token-2.jpg)
+
+  The result will be the correct login command that you can enter into the terminal of VSCode or another open terminal.
 
   ![setup result](docs/debugging/images/console-login-token-3.jpg)
 
